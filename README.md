@@ -69,7 +69,9 @@ The CSV file has 26 categories including 14 from original `finding_list_0x6d6963
 4. _Intro_
   - Introduction must be description of policy.
   > It must be taken from a reliable source.
+
   > If this category is not written, the interface will consider that this policy is not complete.
+  
 5. _Link for more infos_
   -
 6. _Tags_

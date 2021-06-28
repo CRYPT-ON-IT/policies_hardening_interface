@@ -37,20 +37,20 @@ The CSV file `interface/data/finding_list_machine_UIX.csv` has 26 categories inc
 
 ### First 14 original categories :
 
-1. ID
-2. Category
-3. Name
-4. Method
-5. MethodArgument
-6. RegistryPath
-7. RegistryItem
-8. ClassName
-9. Namespace
-10. Property
-11. DefaultValue
-12. RecommendedValue
-13. Operator
-14. Severity
+1. _ID_
+2. _Category_
+3. _Name_
+4. _Method_
+5. _MethodArgument_
+6. _RegistryPath_
+7. _RegistryItem_
+8. _ClassName_
+9. _Namespace_
+10. _Property_
+11. _DefaultValue_
+12. _RecommendedValue_
+13. _Operator_
+14. _Severity_
 
 ### The 12 added categories :
 
@@ -77,19 +77,19 @@ The CSV file `interface/data/finding_list_machine_UIX.csv` has 26 categories inc
         > It must be taken from a reliable source.
         > If this category is not written, the interface will consider that this policy is not complete.
         > In this category, you can use `->` to create `<ul>` list and `\n` to write `<br>` on the interface.
-    - **Example** : 
+    - **Example** :
      ```
-     Allow Windows Ink Workspace 
+     Allow Windows Ink Workspace
      ->If this policy is enabled, you can Share your ideas or draw on screenshots with your pen in the Windows Ink Workspace.
-     ``` 
+     ```
 
 
-5. _Link for more infos_ 
+5. _Link for more infos_
     - This is the link of introduction content.
     - **Format** : `String`
 
-6. _Tags_ 
-    - Tags can be useful for a reseach or to do a filter. 
+6. _Tags_
+    - Tags can be useful for a reseach or to do a filter.
     - **Format** : `List` (`Strings` joint with ';').
     - **Example** : Tags for "SMBv1 Support" policy are :
         - `Network;Share;SMB`
@@ -102,7 +102,7 @@ The CSV file `interface/data/finding_list_machine_UIX.csv` has 26 categories inc
 
 8. _Advice_
     - **Format** : `String`
-    - **Example** : 
+    - **Example** :
         - `It is advisable to set Account lockout duration to approximately 15 minutes. To specify that the account will never be locked out, set the Account lockout threshold value to 0.`
 
 9. _Notes_
@@ -117,8 +117,8 @@ The CSV file `interface/data/finding_list_machine_UIX.csv` has 26 categories inc
 
 11. _Possible values_
     - All possibles values that can be configured in this policy.
-    - **Format** : Couple (Type, separeted by ':' Type:List (Strings joint with ';'). 
-    - **Exemple** : 
+    - **Format** : Couple (Type, separeted by ':' Type:List (Strings joint with ';').
+    - **Exemple** :
         - `String : Enable;Disable;Not defined`
         - `Number : (1 to 99 999) (Enable - minutes);(0) Disable`  
         - `Number : (1)Enable;(0)Disable`
@@ -130,5 +130,3 @@ The CSV file `interface/data/finding_list_machine_UIX.csv` has 26 categories inc
     - **Format** : List. Like :
         - `Windows 10; Windows Server 2019`
         - `At least Windows 7`
-
-

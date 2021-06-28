@@ -55,29 +55,45 @@ The CSV file has 26 categories including 14 from original `finding_list_0x6d6963
 ### The 12 added categories :
 
 1. _UIX impact_
-  - It can be :
-    - 0 : **No impact** It has really no impact on the user interface experience.
-    - 1 : **Potentially** It can impact the UIX with no trivial manipulations like firewall.
-    - 2 : **Impact** This policy directly impact the interface like a prompt or restriction.
-2. _Use_
-  -
-3. _Mode_
-  - We have 3 mode :
-    - **Basic**
-    - **Enterprise**
-    - **StrongBox**
-4. _Intro_
-  - Introduction must be description of policy.
-  > It must be taken from a reliable source.
+    - It can be :
+      - 0 : **No impact** It has really no impact on the user interface experience.
+      - 1 : **Potentially** It can impact the UIX with no trivial manipulations like firewall.
+      - 2 : **Impact** This policy directly impact the interface like a prompt or restriction.
+    - On the interface :
+    <img width="1115" alt="sample-uix-impact" src="https://user-images.githubusercontent.com/34421892/123649629-34250700-d82a-11eb-9a7c-92774a5e923d.png">
 
-  > If this category is not written, the interface will consider that this policy is not complete.
+2. _Use_
+    - It must be a binary value (0/1) to define which policy to check by default.
+
+3. _Mode_
+    - We have 3 mode :
+      - **Basic**
+      - **Enterprise**
+      - **StrongBox**
+
+4. _Intro_
+    - Introduction must be description of policy.
+    
+    > It must be taken from a reliable source.
+
+    > If this category is not written, the interface will consider that this policy is not complete.
   
-5. _Link for more infos_
-  -
-6. _Tags_
+
+5. _Link for more infos_ 
+    - This is the link of introduction content.
+
+6. _Tags_ 
+    - Tags 
+
+
 7. _Consequences_
+
 8. _Advice_
+
 9. _Notes_
+
 10. _Comment_
+
 11. _Possible values_
+
 12. _OS_

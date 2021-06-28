@@ -120,7 +120,7 @@ In this algorithm, we have 2 files :
 3.   If `C` has new updates
 4.     Print updates
 5.     Prompt "Do you want to apply this update in ?"
-6.     If it's "Y"
+6.     If it's "y"
 7.       Refresh `B` with `C`
 8.       Replace `A` with `C`
 ```

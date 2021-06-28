@@ -55,18 +55,16 @@ The CSV file has 26 categories including 14 from original `finding_list_0x6d6963
 ### The 12 added categories :
 
 1. _UIX impact_
-    - It can be :
+    - Format :
       - 0 : **No impact** It has really no impact on the user interface experience.
       - 1 : **Potentially** It can impact the UIX with no trivial manipulations like firewall.
       - 2 : **Impact** This policy directly impact the interface like a prompt or restriction.
-    - On the interface :
-    <img width="1115" alt="sample-uix-impact" src="https://user-images.githubusercontent.com/34421892/123649629-34250700-d82a-11eb-9a7c-92774a5e923d.png">
 
 2. _Use_
     - It must be a binary value (0/1) to define which policy to check by default.
 
 3. _Mode_
-    - We have 3 mode :
+    - Format :
       - **Basic**
       - **Enterprise**
       - **StrongBox**
@@ -83,17 +81,46 @@ The CSV file has 26 categories including 14 from original `finding_list_0x6d6963
     - This is the link of introduction content.
 
 6. _Tags_ 
-    - Tags 
+    - Tags can be useful for a reseach or to do a filter. 
+    - **Format** : List (Strings joint with ';'). Like :
+        - "Network;Share;SMB"
+    - **Example** : Tags for "SMBv1 Support" policy are :
+        - Network
+        - Share
+        - SMB
+    
 
 
 7. _Consequences_
+    - This category describes the potential consequences of the policy after its implementation.
+    - **Format** : String
+    - **Example** : On "Interactive logon: Do not require CTRL+ALT+DEL" (1302) you have this consequence :
+        - _Unless they use a smart card to log on, users must simultaneously press the three keys before the logon dialog box is displayed._ 
 
 8. _Advice_
+    - **Format** : String
+    - **Example** : 
+        - _It is advisable to set Account lockout duration to approximately 15 minutes. To specify that the account will never be locked out, set the Account lockout threshold value to 0._ 
 
 9. _Notes_
 
 10. _Comment_
+    - Your constructive subjective remark.
+    - **Format** : String
+    - **Exemple**
 
 11. _Possible values_
+    - All possibles values that can be configured in this policy.
+    - **Format** : Couple (Type, separeted by ':' Type:List (Strings joint with ';'). Like :
+        - _String : Enable;Disable;Not defined_
+        - _Number : (1 to 99 999) (Enable - minutes);(0) Disable_  
+        - _Number : (1)Enable;(0)Disable_
+        - _List : User-defined list of accounts_
+        - _Boolean : True;False_
+    - **Exemple** : 
 
 12. _OS_
+    - All OS that are compatible with this policy.
+    - **Format** : List. Like :
+        - _Windows 10; Windows Server 2019_
+        - _At least Windows 7_

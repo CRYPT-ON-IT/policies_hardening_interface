@@ -144,10 +144,12 @@ In this algorithm, we have 2 files :
 - `A` : It represents `finding_list_0x6d69636b_machine.csv`
 - `B` : It represents `interface/data/finding_list_machine_UIX.csv`
 
+```
 1. Download original file from HardeningKitty repository in `A`
 2. Compare `A` and `B`
-  1. If `A` has new updates
-    1. Print updates
-    2. Prompt "Do you want to apply this update in ?"
-    3. If it's "Y"
-      1. Refresh `B` file
+3.   If `A` has new updates
+4.     Print updates
+5.     Prompt "Do you want to apply this update in ?"
+6.     If it's "Y"
+7.       Refresh `B` file
+```

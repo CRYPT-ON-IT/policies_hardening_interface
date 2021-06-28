@@ -1,17 +1,28 @@
 <?php
 
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////  Variable part ////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+
 /* Global variable is used for keep the last category */
 $global_categ = "init";
 $done_policies_nbr = 0;
 $checked_policies_nbr = 0;
 $policies_nbr = 0;
 
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////  Function part ////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+
 /* clean text */
 // Input : String
 // Output : String
 // Example :
-// ->item1
-// ->item2  to  <ul><li>item1</li><li>item2</li></ul>
+// [->item1 \n ->item2]  to  [<ul><li>item1</li><li>item2</li></ul>]
 function clean_text($string){
   $string_content = $string;
   $first_occur_pos = strpos($string, '->');
@@ -37,7 +48,7 @@ function write_tr($data)
   $consequences, $advice, $notes, $comment, $possible_values, $operting_system) = $data;
 
 
-  /* to print category title */
+  /* category title printing */
   if ($global_categ!=$category) {
     $categoty_content = preg_replace("/[^a-zA-Z0-9]+/", "", $category);
     echo "
@@ -51,7 +62,11 @@ function write_tr($data)
   }
 
 
-  /****Test phase****/
+  /**** coloring part ****/
+  // Color code :
+  // table-danger : policy whose introduction is not written (considered not done)
+  // table-warning : policy whose UIX_impact category is defined with '?' (considered not completed)
+  // table-orange : policy whose use category is defined with '?' (considered not completed)
   global $done_policies_nbr;
   global $checked_policies_nbr;
   $class_content = "";
@@ -319,6 +334,10 @@ function write_tr($data)
 }
 
 
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////  Main part ////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
 $row = 0;
 if (($handle = fopen("data/finding_list_machine_UIX.csv", "r")) !== FALSE) {
     while (($data = fgetcsv($handle, 3000, ",")) !== FALSE) {
@@ -331,22 +350,28 @@ if (($handle = fopen("data/finding_list_machine_UIX.csv", "r")) !== FALSE) {
     fclose($handle);
 }
 
+
+////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////  Progress view //////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
 $policies_nbr = $row-1;
 $done_policies_nbr = $policies_nbr-$done_policies_nbr;
-
 $calc_global = intval($done_policies_nbr*100/$policies_nbr);
 $calc_goal = intval($checked_policies_nbr*100/50);
 echo "
+<!---- Progress view ---->
 <div class=\"alert alert-primary\" role=\"alert\" style=\"max-width:400px;\">
-<h4>Global progress - $done_policies_nbr/$policies_nbr</h4>
-<div class=\"progress\">
-  <div class=\"progress-bar progress-bar-striped bg-success\" role=\"progressbar\" style=\"width: $calc_global%;\" aria-valuenow=\"$calc_global\" aria-valuemin=\"0\" aria-valuemax=\"100\">$calc_global%</div>
+  <h4>Global progress - $done_policies_nbr/$policies_nbr</h4>
+  <div class=\"progress\">
+    <div class=\"progress-bar progress-bar-striped bg-success\" role=\"progressbar\" style=\"width: $calc_global%;\" aria-valuenow=\"$calc_global\" aria-valuemin=\"0\" aria-valuemax=\"100\">$calc_global%</div>
+  </div>
+  <h4>Goal progress - $checked_policies_nbr/50</h4>
+  <div class=\"progress\">
+    <div class=\"progress-bar progress-bar-striped bg-success\" role=\"progressbar\" style=\"width: $calc_goal%;\" aria-valuenow=\"$calc_goal\" aria-valuemin=\"0\" aria-valuemax=\"100\">$calc_goal%</div>
+  </div>
 </div>
-<h4>Goal progress - $checked_policies_nbr/50</h4>
-<div class=\"progress\">
-  <div class=\"progress-bar progress-bar-striped bg-success\" role=\"progressbar\" style=\"width: $calc_goal%;\" aria-valuenow=\"$calc_goal\" aria-valuemin=\"0\" aria-valuemax=\"100\">$calc_goal%</div>
-</div>
-</div>
+<!---- End progress view ---->
 ";
 
 

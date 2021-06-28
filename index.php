@@ -3,22 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>HardeningKitty Interface</title>
+    <!-- Bootstrap requirements -->
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/master.css">
     <style media="screen">
-
     h1, h2, h3{
       font-weight: bold;
       background: linear-gradient(to right, #005d07, rgb(137, 178, 136) 23.53%, rgb(44, 94, 34) 49.58%, rgb(168, 200, 160) 71.85%, rgb(112, 255, 73));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-
-
     </style>
-    <link rel="stylesheet" href="style/master.css">
   </head>
   <body>
     <section class="container">
@@ -33,16 +31,18 @@
             </svg>
           </a>
         </div>
+        <!-- Intro -->
         <h2>Introduction</h2>
         <hr>
-            <p>
-              Pour utiliser plus facilement le service de <a href="https://github.com/0x6d69636b/windows_hardening">HardeningKitty</a>, nous avons créé une interface permettant de mieux comprendre les politiques de sécurité Windows.
-              Cette interface permet aussi generer un fichier CSV dans le but d'auditer ou d'appliquer un configuration.
-            </p>
-            <p style="font-weight:bold;">
-              To use <a href="https://github.com/0x6d69636b/windows_hardening">HardeningKitty</a> service more easily, we have created an interface which permits better understanding Windows security policies.
-              Also, this interface allows you to generate a CSV file for the purpose of auditing or applying a configuration.
-            </p>
+          <p>
+            Pour utiliser plus facilement le service de <a href="https://github.com/0x6d69636b/windows_hardening">HardeningKitty</a>, nous avons créé une interface permettant de mieux comprendre les politiques de sécurité Windows.
+            Cette interface permet aussi generer un fichier CSV dans le but d'auditer ou d'appliquer un configuration.
+          </p>
+          <p style="font-weight:bold;">
+            To use <a href="https://github.com/0x6d69636b/windows_hardening">HardeningKitty</a> service more easily, we have created an interface which permits better understanding Windows security policies.
+            Also, this interface allows you to generate a CSV file for the purpose of auditing or applying a configuration.
+          </p>
+        <!-- Tuto -->
         <h2>How can i use it ?</h2>
         <hr>
         <h4>How can i use HardeningKitty ?</h4>
@@ -79,7 +79,7 @@
           </li>
         </ol>
       </div>
-      <footer class="pt-5 my-5 text-muted border-top">
+      <footer class="pt-5 my-5 text-muted border-top container" style="max-width:940px;">
         Powered by | <a href="https://github.com/0x6d69636b/windows_hardening">HardeningKitty</a> | <a href="https://getbootstrap.com">Bootstrap</a> | <a href="https://cryptonit.fr">Crypt.on it</a>
       </footer>
     </section>

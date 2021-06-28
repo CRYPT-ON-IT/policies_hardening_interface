@@ -2,6 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <!-- No index meta -->
+    <meta name="robots" content="noindex">
     <title>HardeningKitty Interface</title>
     <!-- Bootstrap requirements -->
     <!-- CSS only -->

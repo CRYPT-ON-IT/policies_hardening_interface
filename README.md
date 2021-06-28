@@ -55,24 +55,25 @@ The CSV file `interface/data/finding_list_machine_UIX.csv` has 26 categories inc
 ### The 12 added categories :
 
 1. _UIX impact_
-    - **Format** :
+    - This important category identify the impact on **user interface experience**.
+    - **Format** : `Number`
       - 0 : **No impact** It has really no impact on the user interface experience.
       - 1 : **Potentially** It can impact the UIX with no trivial manipulations like firewall.
       - 2 : **Impact** This policy directly impact the interface like a prompt or restriction.
 
 2. _Use_
     - It define which policy is checked by default.
-    - **Format** : Binary
+    - **Format** : `Binary`
 
 3. _Mode_
-    - **Format** :
+    - **Format** : `String`
       - **Basic**
       - **Enterprise**
       - **StrongBox**
 
 4. _Intro_
-    - Introduction must be description of policy.
-    - **Format** : String
+    - Introduction must be to describe the policy.
+    - **Format** : `String`
         > It must be taken from a reliable source.
         > If this category is not written, the interface will consider that this policy is not complete.
         > In this category, you can use `->` to create `<ul>` list and `\n` to write `<br>` on the interface.
@@ -85,11 +86,11 @@ The CSV file `interface/data/finding_list_machine_UIX.csv` has 26 categories inc
 
 5. _Link for more infos_ 
     - This is the link of introduction content.
-    - **Format** : String
+    - **Format** : `String`
 
 6. _Tags_ 
     - Tags can be useful for a reseach or to do a filter. 
-    - **Format** : List (Strings joint with ';').
+    - **Format** : `List` (`Strings` joint with ';').
     - **Example** : Tags for "SMBv1 Support" policy are :
         - `Network;Share;SMB`
 

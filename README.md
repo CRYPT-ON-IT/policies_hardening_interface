@@ -33,6 +33,6 @@ Invoke-HardeningKitty -Mode Config -FileFindingList <file.csv> -Backup
 Invoke-HardeningKitty -Mode HailMary -FileFindingList <file.csv>
 ```
 
-## Would you like to see more about project ?
+## Would you like to see more about this project ?
 
 See [this](https://github.com/ataumo/windows_hardening_interface/tree/main/interface).

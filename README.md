@@ -134,9 +134,9 @@ The CSV file `interface/data/finding_list_machine_UIX.csv` has 26 categories inc
         - `Windows 10; Windows Server 2019`
         - `At least Windows 7`
 
-## CSV File update
+## CSV File updater
 
-Obviously, `interface/data/finding_list_machine_UIX.csv` is not updated when a new version appears on HardeningKitty repository. But, if it is just a concatenation of `finding_list_0x6d69636b_machine.csv` and 12 more categories, we can compare data.
+Obviously, `interface/data/finding_list_machine_UIX.csv` is not updated when a new version appears on HardeningKitty repository. But, if it's just a concatenation of `finding_list_0x6d69636b_machine.csv` and 12 more categories, we can compare data.
 
 We have implemented a refresh function in `interface/data/refresh.py` that will execute the following algorithm :
 
@@ -194,3 +194,5 @@ COMPARE...
 
 Do you want to apply this update in ? y/N
 ```
+
+## CSV file generator

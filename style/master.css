@@ -1,0 +1,42 @@
+html {
+  /*scroll-behavior: smooth;*/
+}
+body{
+  background-color: #f7f5f0;
+}
+
+
+h1{
+  font-weight: bold;
+  background: linear-gradient(to right, #005d07, rgb(137, 178, 136) 23.53%, rgb(44, 94, 34) 49.58%, rgb(168, 200, 160) 71.85%, rgb(112, 255, 73));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn{
+  border-radius: 10px;
+}
+
+/* cmd boxes */
+
+pre{
+  color: gainsboro;
+  padding:15px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #161b22;
+  border-radius: 1em;
+}
+
+.code-command {
+  color:rgb(121, 192, 255);
+}
+
+.code-option {
+  color:gray;
+}
+
+.code-argument{
+  color:rgb(255, 123, 114);
+}

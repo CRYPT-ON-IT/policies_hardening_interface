@@ -233,7 +233,7 @@
   </body>
   <script type="text/javascript">
   /************ Gloabl value *************/
-  var global_link = "/test-web/interface"
+  var global_link = "/windows_hardening_interface/interface"
   /************ End Global Value ****************/
 
   /************ To update position scroll-spy when refresh ******************/

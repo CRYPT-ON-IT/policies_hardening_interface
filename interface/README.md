@@ -125,6 +125,22 @@ In this algorithm, we have 2 files :
 8.       Replace `A` with `C`
 ```
 
+### Printer case
+
+- When you have to update a value in policy, it will print this :
+```
+->Update : <NameOfCategory> value of <ID>
+          (<OldValue> -> <NewValue>)
+------------------------------------------------
+```
+> Be careful with this function because if you have voluntarily modified a value, it will replace it.
+
+- And when you have to add a policy :
+```
+    +Add : <ID> policy in your final csv file
+------------------------------------------------
+```
+
 ### Example
 
 ```
@@ -155,6 +171,8 @@ COMPARE...
 ------------------------------------------------
 ->Update : Name value of 1613
           (Device Installation Restrictions: Prevent installation of devices using drivers that match d48179be-ec20-11d1-b6b8-00c04fa372a7 (SBP-2 drive) -> Device Installation: Device Installation Restrictions: Prevent installation of devices using drivers that match d48179be-ec20-11d1-b6b8-00c04fa372a7 (SBP-2 drive))
+------------------------------------------------
+    +Add : 1763 policy in your final csv file
 ------------------------------------------------
 ->Update : RecommendedValue value of 1745
           (0 -> 3)

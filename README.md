@@ -54,11 +54,11 @@ The CSV file has 26 categories including 14 from original `finding_list_0x6d6963
 
 ### The 12 added categories :
 
-1. _UIX impact_
+1. **UIX impact**
   - It can be :
-    - 0 : **No impact** It has really no impact on the user interface experience.
-    - 1 : **Potentially** It can impact the UIX with no trivial manipulations like firewall.
-    - 2 : **Impact** This policy directly impact the interface like a prompt or restriction.
+    - 0 : _No impact_ It has really no impact on the user interface experience.
+    - 1 : _Potentially_ It can impact the UIX with no trivial manipulations like firewall.
+    - 2 : _Impact_ This policy directly impact the interface like a prompt or restriction.
 2. Use
   -
 3. Mode

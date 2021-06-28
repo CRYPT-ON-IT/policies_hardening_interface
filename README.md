@@ -60,6 +60,9 @@ The CSV file `interface/data/finding_list_machine_UIX.csv` has 26 categories inc
       - 0 : **No impact** It has really no impact on the user interface experience.
       - 1 : **Potentially** It can impact the UIX with no trivial manipulations like firewall.
       - 2 : **Impact** This policy directly impact the interface like a prompt or restriction.
+      > It's important to overestimate this value. For example, if your are not sure, set it to `Potentially`.
+    - **Example** : Tags for "SMBv1 Support" policy are :
+        - `Network;Share;SMB`
 
 2. _Use_
     - It define which policy is checked by default.
@@ -130,3 +133,21 @@ The CSV file `interface/data/finding_list_machine_UIX.csv` has 26 categories inc
     - **Format** : List. Like :
         - `Windows 10; Windows Server 2019`
         - `At least Windows 7`
+
+## CSV File update
+
+Obviously, `interface/data/finding_list_machine_UIX.csv` is not updated when a new version appears on HardeningKitty repository. But, if it is just a concatenation of `finding_list_0x6d69636b_machine.csv` and 12 more categories, we can compare data.
+
+We have implemented a refresh function in `interface/data/refresh.py` that will execute the following algorithm :
+
+In this algorithm, we have 2 files :
+- `A` : It represents `finding_list_0x6d69636b_machine.csv`
+- `B` : It represents `interface/data/finding_list_machine_UIX.csv`
+
+1. Download original file from HardeningKitty repository in `A`
+2. Compare `A` and `B`
+  1. If `A` has new updates
+    1. Print updates
+    2. Prompt "Do you want to apply this update in ?"
+    3. If it's "Y"
+      1. Refresh `B` file

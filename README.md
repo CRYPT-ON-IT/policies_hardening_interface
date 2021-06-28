@@ -60,7 +60,9 @@ The CSV file has 26 categories including 14 from original `finding_list_0x6d6963
     - 1 : **Potentially** It can impact the UIX with no trivial manipulations like firewall.
     - 2 : **Impact** This policy directly impact the interface like a prompt or restriction.
 2. Use
+  -
 3. Mode
+  We have 3 mode : bla, bla,bla
 4. Intro
 5. Link for more infos
 6. Tags

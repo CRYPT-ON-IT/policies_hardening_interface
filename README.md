@@ -143,13 +143,54 @@ We have implemented a refresh function in `interface/data/refresh.py` that will 
 In this algorithm, we have 2 files :
 - `A` : It represents `finding_list_0x6d69636b_machine.csv`
 - `B` : It represents `interface/data/finding_list_machine_UIX.csv`
+- `C` : It represents `interface/data/downloaded_tmp_file.csv`
 
 ```
-1. Download original file from HardeningKitty repository in `A`
-2. Compare `A` and `B`
-3.   If `A` has new updates
+1. Download original file from HardeningKitty repository in `C`
+2. Compare `C` and `B`
+3.   If `C` has new updates
 4.     Print updates
 5.     Prompt "Do you want to apply this update in ?"
 6.     If it's "Y"
-7.       Refresh `B` file
+7.       Refresh `B` with `C`
+8.       Replace `A` with `C`
+```
+
+### Example
+
+```
+windows_hardening_interface/interface/data % python refresh.py
+
+COMPARE...
+
+->Update : RecommendedValue value of 1100
+          (15 -> 10)
+------------------------------------------------
+->Update : Name value of 1607
+          (Device Installation Restrictions: Prevent installation of devices that match an ID -> Device Installation: Device Installation Restrictions: Prevent installation of devices that match an ID)
+------------------------------------------------
+->Update : Name value of 1608
+          (Device Installation Restrictions: Prevent installation of devices that match an ID (Retroactive) -> Device Installation: Device Installation Restrictions: Prevent installation of devices that match an ID (Retroactive))
+------------------------------------------------
+->Update : Name value of 1609
+          (Device Installation Restrictions: Prevent installation of devices that match ID PCI\CC_0C0010 (Firewire) -> Device Installation: Device Installation Restrictions: Prevent installation of devices that match ID PCI\CC_0C0010 (Firewire))
+------------------------------------------------
+->Update : Name value of 1610
+          (Device Installation Restrictions: Prevent installation of devices that match ID PCI\CC_0C0A (Thunderbolt) -> Device Installation: Device Installation Restrictions: Prevent installation of devices that match ID PCI\CC_0C0A (Thunderbolt))
+------------------------------------------------
+->Update : Name value of 1611
+          (Device Installation Restrictions: Prevent installation of devices using drivers that match an device setup class -> Device Installation: Device Installation Restrictions: Prevent installation of devices using drivers that match an device setup class)
+------------------------------------------------
+->Update : Name value of 1612
+          (Device Installation Restrictions: Prevent installation of devices using drivers that match an device setup class (Retroactive) -> Device Installation: Device Installation Restrictions: Prevent installation of devices using drivers that match an device setup class (Retroactive))
+------------------------------------------------
+->Update : Name value of 1613
+          (Device Installation Restrictions: Prevent installation of devices using drivers that match d48179be-ec20-11d1-b6b8-00c04fa372a7 (SBP-2 drive) -> Device Installation: Device Installation Restrictions: Prevent installation of devices using drivers that match d48179be-ec20-11d1-b6b8-00c04fa372a7 (SBP-2 drive))
+------------------------------------------------
+->Update : RecommendedValue value of 1745
+          (0 -> 3)
+------------------------------------------------
+
+
+Do you want to apply this update in ? y/N
 ```

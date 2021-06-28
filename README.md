@@ -6,11 +6,11 @@ To use [HardeningKitty](https://github.com/0x6d69636b/windows_hardening) service
 
 This web-interface use php, therefore, it's necessary to run it on serveur environnement like [MAMP](https://www.mamp.info/en/downloads/) or similar.
 
+You can also try this interface through a [demo](https://ataumo-photo.fr/windows_hardening_interface/)
+
 ## How can i use it ?
 
 All details about HardeningKitty is on this repository : https://github.com/0x6d69636b/windows_hardening
-
-You can try this interface through a [demo](https://ataumo-photo.fr/windows_hardening_interface/)
 
 ### How can i use HardeningKitty ?
 1. Download the HardeningKitty script [here](https://github.com/0x6d69636b/windows_hardening)

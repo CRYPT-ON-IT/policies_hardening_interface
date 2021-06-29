@@ -27,6 +27,7 @@
         padding: 0 !important;
         border: transparent;
     }
+
     .alert{
       border-radius: 1em;
       border: none;
@@ -60,7 +61,7 @@
       border-color: #dfd4c2;
     }
 
-    .title-tr{
+    .title-tr {
       box-shadow: none !important;
     }
 

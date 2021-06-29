@@ -77,7 +77,7 @@ var csv_data_list=[];
 $('#csv-generate').click(function(){
   $("#csv-generate-loader").css("display","inline-block")
 
-  $(".tab-visible").each(
+  $(".tr-visible").each(
     function(i){
       var csv_data_string = $(this).attr("csv-data");
       if (csv_data_string) {

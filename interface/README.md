@@ -1,6 +1,6 @@
 # How does it work ?
 
-## CSV file
+## CSV file content
 
 The CSV file `interface/data/finding_list_machine_UIX.csv` has 26 categories including 14 from original [`finding_list_0x6d69636b_machine.csv`](https://github.com/0x6d69636b/windows_hardening/blob/master/lists/finding_list_0x6d69636b_machine.csv) and 12 more.
 
@@ -203,7 +203,7 @@ The generator function implemented in `interface/script/generate_csv.js` can be 
 2. We define a list called `csv-data-list`
 
 // Getting data from interface
-3. For each row in table identified by `.tab-visible` class
+3. For each row in table identified by `.tr-visible` class
 4.    Create sub list with `csv-data` attribute content (separated by `,`)
 5.    Add this sub list in other list called `csv-data-list`
 
@@ -215,4 +215,19 @@ The generator function implemented in `interface/script/generate_csv.js` can be 
 10.        For each row in `/data/finding_list_0x6d69636b_machine.csv`
 11.           If sublist ID and row ID are equals
 12.               We replace RecommendedValue of file with our RecommendedValue from csv-data
+```
+
+## Classes
+
+## Table structure
+
+To make a working toggle,
+
+```html
+<tr id="data-1000" class="tr-visible content-1000 row-content visible" csv-data="1000,Disabled,checked" data-tags="Network;Share;SMB" active-filter-uix="false" active-filter-severity="false">
+</tr>
+<tr class="tr-visible content-1000"></tr>
+<!---- Toggle content ---->
+<tr class="tr-visible content-1000"></tr>
+<!---- End toggle content ---->
 ```

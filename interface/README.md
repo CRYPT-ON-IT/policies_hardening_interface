@@ -186,7 +186,7 @@ Do you want to apply this update in ? y/N
 The advantages of this interface are the ability to modify your configuration and generate the CSV file to use HardeningKitty.
 To download your configuration, you have 2 buttons :
 - `Generate CSV File` that will write CSV data in `href` of `Download CSV file` button
-- And `Download CSV File` that will download the CSV file.
+- And `Download CSV File` that will download the CSV file (obviously...).
 
 The generator function implemented in `interface/script/generate_csv.js` can be separated in 2 parts :
 1. Getting data from interface like `RecommendedValue` and `Check` state (that will called `CheckState`)

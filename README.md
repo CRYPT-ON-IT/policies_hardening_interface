@@ -38,4 +38,4 @@ Invoke-HardeningKitty -Mode HailMary -FileFindingList <file.csv>
 
 ## Would you like to see more about this project ?
 
-You can see this to understand how the interface works [this](https://github.com/ataumo/windows_hardening_interface/tree/main/interface).
+You can see [this](https://github.com/ataumo/windows_hardening_interface/tree/main/interface) to understand how the interface works.

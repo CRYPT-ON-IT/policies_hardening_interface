@@ -85,12 +85,15 @@ The CSV file `interface/data/finding_list_machine_UIX.csv` has 26 categories inc
     - Your constructive subjective remark.
         > In this category, you can use `->` to create `<ul>` list and `\n` to write `<br>` on the interface.
     - **Format** : `String`
-    - **Exemple**
+    - **Example**
 
 11. _Possible values_
     - All possibles values that can be configured in this policy.
-    - **Format** : Couple (Type, separeted by ':' Type:List (Strings joint with ';').
-    - **Exemple** :
+    - **Format** : Couple (Type,List) separeted by ':' Type:List (Strings joint with ';'). It can be defined like that :
+        - Interval : `Number : max-min`
+        - List of values : `Number : val1;val2;val3`
+        - Indication abour value : `Number : val1(String);val2(String)`
+    - **Example** :
         - `String : Enable;Disable;Not defined`
         - `Number : (1 to 99 999) (Enable - minutes);(0) Disable`  
         - `Number : (1)Enable;(0)Disable`
@@ -99,7 +102,8 @@ The CSV file `interface/data/finding_list_machine_UIX.csv` has 26 categories inc
 
 12. _OS_
     - All OS that are compatible with this policy.
-    - **Format** : List. Like :
+    - **Format** : `List`
+    - **Example** :
         - `Windows 10; Windows Server 2019`
         - `At least Windows 7`
 

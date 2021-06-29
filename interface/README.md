@@ -195,11 +195,13 @@ The generator function implemented in `interface/script/generate_csv.js` that wi
 ```
 1. On click on `Generate CSV File` button
 2. We define a list called `csv-data-list`
+
 // Getting data from interface
 3. For each row in table identified by `.tab-visible` class
 4.    Create sub list with `csv-data` attribute content (separated by `,`)
 5.    Add this sub list in other list called `csv-data-list`
-// Getting data from original csv file 
+
+// Getting data from original csv file
 6. Read `/data/finding_list_0x6d69636b_machine.csv`
 7. For each sub list in `csv-data-list`
 8.    We get the policy ID from the first element of sublist

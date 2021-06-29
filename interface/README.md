@@ -225,7 +225,9 @@ To make a working toggle, we have 2 `<tr>` tags.
 
 - The first `<tr>` tag : The first tag define the visible row with all important values in this order :
 
+|----|------|------|----------|------------|---------------|-------------------|-------|
 | ID | Mode | Name | Severity | UIX impact | Default value | Recommended value | Apply |
+|----|------|------|----------|------------|---------------|-------------------|-------|
 
 ```html
 <tr id="data-1000" class="tr-visible content-1000 row-content" csv-data="1000,Disabled,checked" data-tags="Network;Share;SMB" active-filter-uix="false" active-filter-severity="false">

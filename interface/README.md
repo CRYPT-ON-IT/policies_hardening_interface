@@ -223,22 +223,28 @@ The generator function implemented in `interface/script/generate_csv.js` can be 
 
 To make a working toggle, we have 2 `<tr>` tags.  
 
-- **The first `<tr>` tag** : The first tag define the visible row with all important values in this order :
-
+- **The first `<tr>` tag** : The first tag print the **visible row** with all important values in this order :
 
 | ID | Mode | Name | Severity | UIX impact | Default value | Recommended value | Apply |
 |----|------|------|----------|------------|---------------|-------------------|-------|
 
+- **The second `<tr>` tag** : This tag contain all data about the related policy. It appears when clicking on visible row `ID`
+
+But, to use a **striped table** we have to add a third blank `<tr>` tag between the two others.
+
+So, our structure looks like this :
 ```html
+<!-- Visible row -->
 <tr id="data-1000" class="tr-visible content-1000 row-content" csv-data="1000,Disabled,checked" data-tags="Network;Share;SMB" active-filter-uix="false" active-filter-severity="false">
   ...
 </tr>
+<!-- End visible row -->
 <tr class="content-1000"></tr>
-<!---- Toggle content ---->
+<!-- Toggle content -->
 <tr class="content-1000">
   ...
 </tr>
-<!---- End toggle content ---->
+<!-- End toggle content -->
 ```
 
 ### Attributes

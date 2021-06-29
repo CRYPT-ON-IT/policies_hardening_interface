@@ -223,7 +223,7 @@ The generator function implemented in `interface/script/generate_csv.js` can be 
 
 To make a working toggle, we have 2 `<tr>` tags.  
 
-- The first `<tr>` tag : The first tag define the visible row with all important values in this order :
+- **The first `<tr>` tag** : The first tag define the visible row with all important values in this order :
 
 
 | ID | Mode | Name | Severity | UIX impact | Default value | Recommended value | Apply |

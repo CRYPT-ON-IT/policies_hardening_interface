@@ -224,10 +224,10 @@ The generator function implemented in `interface/script/generate_csv.js` can be 
 To make a working toggle,
 
 ```html
-<tr id="data-1000" class="tr-visible content-1000 row-content visible" csv-data="1000,Disabled,checked" data-tags="Network;Share;SMB" active-filter-uix="false" active-filter-severity="false">
+<tr id="data-1000" class="tr-visible content-1000 row-content" csv-data="1000,Disabled,checked" data-tags="Network;Share;SMB" active-filter-uix="false" active-filter-severity="false">
 </tr>
-<tr class="tr-visible content-1000"></tr>
+<tr class="content-1000"></tr>
 <!---- Toggle content ---->
-<tr class="tr-visible content-1000"></tr>
+<tr class="content-1000"></tr>
 <!---- End toggle content ---->
 ```

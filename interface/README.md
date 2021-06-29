@@ -190,6 +190,8 @@ To download your configuration in CSV file, you have 2 buttons :
 
 The generator function implemented in `interface/script/generate_csv.js` that will execute the following algorithm :
 
+> In `csv-data` attribute we have this content : csv-data="<ID>,<RecommendedValue>,<CheckState>"
+
 ```
 1. On click on `Generate CSV File`
 2. For each row in table identified by `.tab-visible` class
@@ -197,5 +199,6 @@ The generator function implemented in `interface/script/generate_csv.js` that wi
 4.    Add this sub list in other list called `csv-data-list`
 5. Read `/data/finding_list_0x6d69636b_machine.csv`
 6. For each sub list in `csv-data-list`
-7.    We get ID
+7.    We get the policy ID
+8.    
 ```

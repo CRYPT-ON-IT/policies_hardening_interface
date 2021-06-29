@@ -190,7 +190,7 @@ To download your configuration, you have 2 buttons :
 
 The generator function implemented in `interface/script/generate_csv.js` can be separated in 2 parts :
 1. Getting data from interface like `RecommendedValue` and `Check` state (that will called `CheckState`)
-2. Getting data from original CSV file configuration to just select only all checked policies and replace RecommendedValue
+2. Getting data from original CSV file configuration to just select only all checked policies and replace its `RecommendedValue`
 
 > In `csv-data` attribute we have this content : csv-data="_ID_,_RecommendedValue_,_CheckState_"
 

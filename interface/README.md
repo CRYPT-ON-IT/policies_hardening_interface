@@ -190,7 +190,7 @@ To download your configuration in CSV file, you have 2 buttons :
 
 The generator function implemented in `interface/script/generate_csv.js` that will execute the following algorithm :
 
-> In `csv-data` attribute we have this content : csv-data="<ID>,<RecommendedValue>,<CheckState>"
+> In `csv-data` attribute we have this content : csv-data="_ID_,_RecommendedValue_,_CheckState_"
 
 ```
 1. On click on `Generate CSV File`

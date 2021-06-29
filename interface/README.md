@@ -2,7 +2,7 @@
 
 ## CSV file
 
-The CSV file `interface/data/finding_list_machine_UIX.csv` has 26 categories including 14 from original `finding_list_0x6d69636b_machine.csv` and 12 more.
+The CSV file `interface/data/finding_list_machine_UIX.csv` has 26 categories including 14 from original [`finding_list_0x6d69636b_machine.csv`](https://github.com/0x6d69636b/windows_hardening/blob/master/lists/finding_list_0x6d69636b_machine.csv) and 12 more.
 
 ### First 14 original categories :
 

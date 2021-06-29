@@ -199,6 +199,9 @@ The generator function implemented in `interface/script/generate_csv.js` that wi
 4.    Add this sub list in other list called `csv-data-list`
 5. Read `/data/finding_list_0x6d69636b_machine.csv`
 6. For each sub list in `csv-data-list`
-7.    We get the policy ID
-8.    
+7.    We get the policy ID from the first element of sublist
+8.    If the third element of sublist is 'checked'
+9.        For each row in `/data/finding_list_0x6d69636b_machine.csv`
+10.           If sublist ID and row ID are equals
+11.               We replace RecommendedValue of file with our RecommendedValue from csv-data 
 ```

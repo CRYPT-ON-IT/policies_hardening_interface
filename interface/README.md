@@ -190,7 +190,7 @@ To download your configuration in CSV file, you have 2 buttons :
 
 The generator function implemented in `interface/script/generate_csv.js` that will execute the following algorithm :
 
-
+```
 1. On click on `Generate CSV File`
 2. For each row in table identified by `.tab-visible` class
 3.    Create sub list with `csv-data` attribute content (separated by `,`)
@@ -198,3 +198,4 @@ The generator function implemented in `interface/script/generate_csv.js` that wi
 5. Read `/data/finding_list_0x6d69636b_machine.csv`
 6. For each sub list in `csv-data-list`
 7.    We get ID
+```

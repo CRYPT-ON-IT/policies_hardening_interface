@@ -234,3 +234,15 @@ To make a working toggle,
 </tr>
 <!---- End toggle content ---->
 ```
+
+### Attributes
+
+- _id_ : `data-ID`
+- _class_ :
+  - `tr-visible`
+  - `content-ID`
+  - `row-content`
+- _csv-data_ : `ID,RecommendedValue,CheckState`
+- _data-tags_ : `tag1;tag2;...`
+- _active-filter-uix_ :
+- _active-filter-severity_ : 

@@ -183,3 +183,18 @@ Do you want to apply this update in ? y/N
 ```
 
 ## CSV file generator
+
+To download your configuration in CSV file, you have 2 buttons :
+- `Generate CSV File` that will write CSV data in `href` of `Download CSV file` button
+- And `Download CSV File` will download the CSV file.
+
+The generator function implemented in `interface/script/generate_csv.js` that will execute the following algorithm :
+
+
+1. On click on `Generate CSV File`
+2. For each row in table identified by `.tab-visible` class
+3.    Create sub list with `csv-data` attribute content (separated by `,`)
+4.    Add this sub list in other list called `csv-data-list`
+5. Read `/data/finding_list_0x6d69636b_machine.csv`
+6. For each sub list in `csv-data-list`
+7.    We get ID

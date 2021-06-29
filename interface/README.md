@@ -221,7 +221,24 @@ The generator function implemented in `interface/script/generate_csv.js` can be 
 
 ## Table structure
 
-To make a working toggle,
+To make a working toggle, we have 2 `<tr>` tags.  
+
+- The first `<tr>` tag : The first tag define the visible row with all important values in this order :
+
+1. ID
+2. Mode :
+3. Name
+4. Severity
+5. UIX impact
+6. Default value
+7. Recommended value
+8. Apply
+
+| Category | Type | Filter |   |   |
+|----------|------|--------|---|---|
+| ID       |      |        |   |   |
+| Name     |      |        |   |   |
+| Severity |      |        |   |   |
 
 ```html
 <tr id="data-1000" class="tr-visible content-1000 row-content" csv-data="1000,Disabled,checked" data-tags="Network;Share;SMB" active-filter-uix="false" active-filter-severity="false">
@@ -245,4 +262,4 @@ To make a working toggle,
 - _csv-data_ : `ID,RecommendedValue,CheckState`
 - _data-tags_ : `tag1;tag2;...`
 - _active-filter-uix_ :
-- _active-filter-severity_ : 
+- _active-filter-severity_ :

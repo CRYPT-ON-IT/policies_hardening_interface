@@ -24,7 +24,7 @@ The CSV file `interface/data/finding_list_machine_UIX.csv` has 26 categories inc
 ### The 12 added categories :
 
 1. _UIX impact_
-    - This important category identify the impact on **user interface experience**.
+    - This important category identifies the impact on **user interface experience**.
     - **Format** : `Number`
       - 0 : **No impact** It has really no impact on the user interface experience.
       - 1 : **Potentially** It can impact the UIX with no trivial manipulations like firewall.

@@ -1,5 +1,9 @@
 <?php
 
+//
+// This code will load all categories to write them in the left nav bar  
+//
+
 /* Global variable is used for keep the last category */
 $global_categ = "init";
 
@@ -27,11 +31,6 @@ $row = 1;
 if (($handle = fopen("data/finding_list_machine_UIX.csv", "r")) !== FALSE) {
     while (($data = fgetcsv($handle, 3000, ",")) !== FALSE) {
         $num = count($data);
-        //echo "<p> ==========> $num champs à la ligne $row: <br /></p>\n";
-        /*for ($c=0; $c < $num; $c++) {
-            echo $data[$c] . "<br />\n";
-
-        }*/
         if ($row>1) {
           write_category($data);
         }

@@ -1,3 +1,9 @@
+<?php
+$link_windows_hard_interface = "interface";
+$link_macos_hard_interface = "interface/macos";
+$link_style_master = "style/master.css";
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -10,7 +16,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style/master.css">
+    <link rel="stylesheet" href="<?php echo $link_style_master; ?>">
     <style media="screen">
     h1, h2, h3{
       font-weight: bold;
@@ -26,8 +32,14 @@
         <h1>Welcome to the HardeningKitty Interface</h1>
         <hr>
         <div class="d-flex justify-content-end m-2">
-          <a class="btn btn-success mx-1" role="button" href="interface">
+          <a class="btn btn-success mx-1" role="button" href="<?php echo $link_windows_hard_interface; ?>">
             Go to the Windows Hardening interface
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+              <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+            </svg>
+          </a>
+          <a class="btn btn-success mx-1" role="button" href="<?php echo $link_macos_hard_interface; ?>">
+            Go to the macOS Hardening interface
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
               <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
             </svg>

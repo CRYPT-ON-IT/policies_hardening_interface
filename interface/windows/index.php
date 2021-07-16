@@ -1,3 +1,9 @@
+<?php
+
+$link_style_master = "http://$_SERVER[HTTP_HOST]/windows_hardening_interface/style/master.css";
+
+ ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -9,93 +15,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-    <style media="screen">
-
-    body{
-      position: relative;
-      overflow: auto;
-    }
-
-    table{
-      border-collapse: collapse;
-      border-radius: 1em;
-      overflow: hidden;
-      background-color: white;
-    }
-
-    .hiddenRow {
-        padding: 0 !important;
-        border: transparent;
-    }
-
-    .alert{
-      border-radius: 1em;
-      border: none;
-    }
-
-    .alert-danger{
-      background: linear-gradient(to top right, #f5c2c7, #f5e2e4);
-    }
-
-    .alert-success{
-      background: linear-gradient(to top right, #badbcc, #e5fcf2);
-    }
-
-    .alert-primary{
-      background: linear-gradient(to top right, #cfe2ff, #f1f6ff);
-    }
-
-    .alert-secondary{
-      background: linear-gradient(to top right, #e2e3e5, #f8f9fa);
-    }
-
-    .table-orange{
-      --bs-table-bg: #f9ebd7;
-      --bs-table-striped-bg: #ecdbcc;
-      --bs-table-striped-color: #000;
-      --bs-table-active-bg: #dfd4c2;
-      --bs-table-active-color: #000;
-      --bs-table-hover-bg: #e6d8c8;
-      --bs-table-hover-color: #000;
-      color: #000;
-      border-color: #dfd4c2;
-    }
-
-    .title-tr {
-      box-shadow: none !important;
-    }
-
-    .blur-backg {
-      -webkit-backdrop-filter: saturate(180%) blur(20px);
-      backdrop-filter: saturate(180%) blur(20px);
-    }
-
-    .toast {
-      background-color: rgba(255,255,255,.5);
-      border: none;
-      border-radius: 1em;
-    }
-
-    .toast-header {
-      border-radius: 1em;
-    }
-
-    pre code{
-      display: inline;
-      max-width: auto;
-      padding: 0;
-      margin: 0;
-      overflow: visible;
-      line-height: inherit;
-      word-wrap: normal;
-      background-color: transparent;
-      border: 0;
-      font-size: small;
-    }
-
-
-    </style>
-    <link rel="stylesheet" href="../style/master.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="<?php echo $link_style_master ?>">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
   <body data-spy="scroll">

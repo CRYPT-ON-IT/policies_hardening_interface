@@ -1,5 +1,7 @@
 <?php
 
+$link_csv_file = "data/finding_list_machine_UIX.csv";
+
 
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////  Variable part ////////////////////////////////
@@ -339,7 +341,7 @@ function write_tr($data)
 ////////////////////////////////////////////////////////////////////////////////
 
 $row = 0;
-if (($handle = fopen("data/finding_list_machine_UIX.csv", "r")) !== FALSE) {
+if (($handle = fopen($link_csv_file, "r")) !== FALSE) {
     while (($data = fgetcsv($handle, 3000, ",")) !== FALSE) {
         if ($row>0) {
           write_tr($data);

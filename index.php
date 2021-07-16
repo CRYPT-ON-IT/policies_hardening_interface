@@ -36,10 +36,6 @@
         <!-- Intro -->
         <h2>Introduction</h2>
         <hr>
-          <p>
-            Pour utiliser plus facilement le service de <a href="https://github.com/0x6d69636b/windows_hardening">HardeningKitty</a>, nous avons créé une interface permettant de mieux comprendre les politiques de sécurité Windows.
-            Cette interface permet aussi generer un fichier CSV dans le but d'auditer ou d'appliquer un configuration.
-          </p>
           <p style="font-weight:bold;">
             To use <a href="https://github.com/0x6d69636b/windows_hardening">HardeningKitty</a> service more easily, we have created an interface which permits better understanding Windows security policies.
             Also, this interface allows you to generate a CSV file for the purpose of auditing or applying a configuration.

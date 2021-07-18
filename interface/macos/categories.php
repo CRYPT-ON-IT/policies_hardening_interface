@@ -12,11 +12,11 @@ $global_categ = "init";
 function write_category($data)
 {
   global $global_categ;
-  list($id, $category, $name, $method,
-  $method_argument, $registry_path, $registry_item, $classname, $namespace,
-  $property, $default_value, $recommended_value, $operator, $severity,
-  $UIX_impact, $use, $use_mode, $intro, $link_for_more_infos,
-  $consequences, $advice, $notes, $possible_values, $operting_system) = $data;
+  list($id, $category, $name, $assessment_status, $method,
+  $method_option, $get_command, $set_command, $user,
+  $registry_path, $registry_item, $default_value, $recommended_value, $type_value, $operator, $severity,
+  $UIX_impact, $use, $use_mode, $intro, $link_for_more_infos, $tags
+  $consequences, $advice, $notes, $comment, $possible_values, $operting_system) = $data;
 
 
   /* to print category title */

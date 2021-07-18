@@ -53,7 +53,7 @@ Invoke-HardeningKitty -Mode HailMary -FileFindingList <file.csv>
 
 ### On macOS
 
-All details about macOS Hardening project is on this repository : https://github.com/ataumo/macos_hardening
+All details about Tethys is on this repository : https://github.com/ataumo/macos_hardening
 
 #### How can I use Tethys ?
 

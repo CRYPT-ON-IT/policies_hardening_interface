@@ -1,5 +1,5 @@
 <?php
-$link_windows_hard_interface = "interface";
+$link_windows_hard_interface = "interface/windows";
 $link_macos_hard_interface = "interface/macos";
 $link_style_master = "style/master.css";
 ?>

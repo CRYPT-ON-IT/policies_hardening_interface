@@ -156,7 +156,7 @@ $link_style_master = "http://$_SERVER[HTTP_HOST]/windows_hardening_interface/sty
 
   </body>
   <script type="text/javascript">
-  /************ Gloabl value *************/
+  /************ Gloabal value *************/
   var global_link = "/windows_hardening_interface/interface"
   /************ End Global Value ****************/
 

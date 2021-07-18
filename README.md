@@ -1,4 +1,5 @@
 ![Work in progress label](https://img.shields.io/badge/-Work%20in%20progress-yellow)
+[![PHP Linting](https://github.com/ataumo/windows_hardening_interface/actions/workflows/phplint.yml/badge.svg)](https://github.com/ataumo/windows_hardening_interface/actions/workflows/phplint.yml)
 
 # Welcome to the HardeningKitty Interface
 

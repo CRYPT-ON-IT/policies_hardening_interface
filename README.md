@@ -1,3 +1,5 @@
+![Work in progress label](https://img.shields.io/badge/-Work%20in%20progress-yellow)
+
 # Welcome to the HardeningKitty Interface
 
 ## Introduction

@@ -8,7 +8,7 @@ body{
 
 h1{
   font-weight: bold;
-  background: linear-gradient(to right, #005d07, rgb(137, 178, 136) 23.53%, rgb(44, 94, 34) 49.58%, rgb(168, 200, 160) 71.85%, rgb(112, 255, 73));
+  background: linear-gradient(to right, #005d07, rgb(137, 178, 136) 23.53%, rgb(44, 94, 34) 49.58%, rgb(168, 200, 160) 71.85%, rgb(44, 106, 28));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

@@ -13,7 +13,7 @@ jobs:
       with:
         protocol: ftp
         port: 22 # todo replace with your web hosts ftps port
-        server: sftp.cluster021.hosting.ovh.net
+        server: ftp.cluster021.hosting.ovh.net
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./

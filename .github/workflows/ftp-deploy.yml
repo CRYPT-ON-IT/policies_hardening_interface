@@ -17,7 +17,6 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }} # FTP username
         password: ${{ secrets.FTP_PASSWORD }} # FTP password
         remote_folder: www/ # optional, remote path of your FTP server
-        local_folder: dist # optional, local path, default is: dist
         cleanup: false # optional, remove existing files inside FTP remote folder
         pasive: true # optional
         

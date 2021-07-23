@@ -1,9 +1,6 @@
 
-
 <!-- All links -->
 <?php include($_SERVER['DOCUMENT_ROOT']."/policies_hardening_interface/ressources/links.php");?>
-
-
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -13,17 +10,17 @@
     <meta name="robots" content="noindex">
     <title>Hardening Interface</title>
     <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="<?php echo $link_style_bootstrap ?>" rel="stylesheet" integrity="<?php echo $style_bootstrap_intregrity ?>" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="<?php echo $link_script_bootstrap ?>" integrity="<?php echo $script_bootstrap_intregrity ?>" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="<?php echo $link_style_master ?>">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="<?php echo $link_script_ajax ?>"></script>
   </head>
   <body data-spy="scroll">
     <section class="m-5">
       <div class="container mt-5" style="max-width:940px;">
-        <h1>Welcome to the HardeningKitty Interface</h1>
+        <h1>Welcome to the Windows Hardening Interface</h1>
         <hr>
           <div class="d-flex justify-content-end m-2">
             <!-- <a id="csv-generate" class="btn btn-success mx-1" role="button">
@@ -159,7 +156,7 @@
   </body>
   <script type="text/javascript">
   /************ Gloabal value *************/
-  var global_link = "/windows_hardening_interface/interface"
+  var global_link = "/policies_hardening_interface/interface"
   /************ End Global Value ****************/
 
   /************ To update position scroll-spy when refresh ******************/

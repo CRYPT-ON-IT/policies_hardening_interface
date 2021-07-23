@@ -16,6 +16,7 @@ jobs:
         port: 21 # optional, default is: 21
         username: ${{ secrets.FTP_USERNAME }} # FTP username
         password: ${{ secrets.FTP_PASSWORD }} # FTP password
+        local_folder: / # optional, local path, default is: dist
         remote_folder: www/ # optional, remote path of your FTP server
         cleanup: false # optional, remove existing files inside FTP remote folder
         pasive: true # optional

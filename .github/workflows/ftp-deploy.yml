@@ -8,16 +8,16 @@ jobs:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2
     
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.1.0
+    - name: 📂 Sync files FTP Deployer
+      uses: sand4rt/ftp-deployer@v1.3
       with:
-        dry-run: true
-        log-level: verbose
-        server: sftp.cluster021.hosting.ovh.net
-        username: ataumophzi
-        port: 21
-        protocol: ftp
-        local-dir: ./
-        server-dir: /www/
-        password: ${{ secrets.ftp_password }}
+        sftp: true # optional
+        host: ftp.cluster021.hosting.ovh.net # e.g. ftp.host.com or sftp.host.com (without ftp:// or ftps://)
+        port: 21 # optional, default is: 21
+        username: ${{ secrets.FTP_USERNAME }} # FTP username
+        password: ${{ secrets.FTP_PASSWORD }} # FTP password
+        remote_folder: www/ # optional, remote path of your FTP server
+        local_folder: dist # optional, local path, default is: dist
+        cleanup: false # optional, remove existing files inside FTP remote folder
+        pasive: true # optional
         

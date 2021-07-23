@@ -1,9 +1,7 @@
 
 
 <!-- All links -->
-<?php include($_SERVER['DOCUMENT_ROOT']."/policies_hardening_interface/ressources/links.php");
-echo $_SERVER['DOCUMENT_ROOT']."/policies_hardening_interface/ressources/links.php";
-?>
+<?php include($_SERVER['DOCUMENT_ROOT']."/policies_hardening_interface/ressources/links.php");?>
 
 
 

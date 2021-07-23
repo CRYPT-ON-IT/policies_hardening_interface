@@ -12,7 +12,7 @@ Moreover, it works on macOS with [Tethys](https://github.com/ataumo/macos_harden
 
 This web-interface use php, therefore, it's necessary to run it on serveur environnement like [MAMP](https://www.mamp.info/en/downloads/) or similar.
 
-You can also try this interface through a [demo](https://ataumo-photo.fr/windows_hardening_interface/).
+You can also try this interface through a [demo](https://ataumo-photo.fr/policies_hardening_interface/).
 
 ## How can I use it ?
 

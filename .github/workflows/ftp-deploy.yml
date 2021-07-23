@@ -12,7 +12,7 @@ jobs:
       uses: sand4rt/ftp-deployer@v1.3
       with:
         sftp: true # optional
-        host: ftp.cluster021.hosting.ovh.net # e.g. ftp.host.com or sftp.host.com (without ftp:// or ftps://)
+        host: sftp.cluster021.hosting.ovh.net # e.g. ftp.host.com or sftp.host.com (without ftp:// or ftps://)
         port: 21 # optional, default is: 21
         username: ${{ secrets.FTP_USERNAME }} # FTP username
         password: ${{ secrets.FTP_PASSWORD }} # FTP password

@@ -9,16 +9,13 @@ jobs:
       uses: actions/checkout@v2
     
     - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.1.0
+      id: upload
+      uses: Creepios/sftp-action@v1.0.1
       with:
-        protocol: ftp
-        port: 21 # todo replace with your web hosts ftps port
-        server: ftp.cluster021.hosting.ovh.net
+        host: 'ftp.cluster021.hosting.ovh.net'
+        port: 22
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./
-        server-dir: /www/
-        dry-run: true
-        log-level: verbose
-        security: loose
+        localPath: './'
+        remotePath: '/www/'
         

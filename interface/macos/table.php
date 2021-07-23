@@ -19,6 +19,15 @@ $policies_nbr = 0;
 ////////////////////////////////  Function part ////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
+/* sanitize class and div */
+// Input : String
+// Output : String
+// Example :
+// [hello world 1234:5]  to  [hello-world-12345]
+function sanitizer($string){
+   $string = str_replace(' ', '-', $string); // Replaces all spaces with hyphens.
+   return preg_replace('/[^A-Za-z0-9\-]/', '', $string); // Removes special chars.
+}
 
 /* clean text */
 // Input : String
@@ -49,6 +58,8 @@ function write_tr($data)
   $level, $graphical_method, $UIX_impact, $use, $use_mode, $intro, $link_for_more_infos, $tags,
   $consequences, $advice, $notes, $comment, $possible_values, $operting_system) = $data;
 
+  /* we clean id content because it is used in href */
+  $id = sanitizer($id);
 
   /* category title printing */
   if ($global_categ!=$category) {

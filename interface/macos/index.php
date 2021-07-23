@@ -142,6 +142,7 @@ $link_style_master = "http://$_SERVER[HTTP_HOST]/windows_hardening_interface/sty
             </table>
           </div>
 
+
         </div>
 
 

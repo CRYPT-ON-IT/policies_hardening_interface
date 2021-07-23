@@ -12,7 +12,7 @@ jobs:
       id: upload
       uses: Creepios/sftp-action@v1.0.1
       with:
-        host: 'ftp.cluster021.hosting.ovh.net'
+        host: ${{ secrets.FTP_HOST }}
         port: 22
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}

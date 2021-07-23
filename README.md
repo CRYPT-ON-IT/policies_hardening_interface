@@ -1,6 +1,6 @@
 ![Work in progress label](https://img.shields.io/badge/-Work%20in%20progress-yellow)
 [![PHP Linting](https://github.com/ataumo/windows_hardening_interface/actions/workflows/phplint.yml/badge.svg)](https://github.com/ataumo/windows_hardening_interface/actions/workflows/phplint.yml)
-[![Deploy website](https://github.com/ataumo/policies_hardening_interface/actions/workflows/ftp-deploy.yml/badge.svg)](https://github.com/ataumo/policies_hardening_interface/actions/workflows/ftp-deploy.yml)
+[![🚀 Deploy website on push](https://github.com/ataumo/policies_hardening_interface/actions/workflows/ftp-deploy.yml/badge.svg?event=push)](https://github.com/ataumo/policies_hardening_interface/actions/workflows/ftp-deploy.yml)
 
 # Welcome to the Hardening Interface
 

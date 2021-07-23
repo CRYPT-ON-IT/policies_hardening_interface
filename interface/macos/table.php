@@ -46,7 +46,7 @@ function write_tr($data)
   list($id, $category, $name, $assessment_status, $method,
   $method_option, $get_command, $set_command, $user,
   $registry_path, $registry_item, $default_value, $recommended_value, $type_value, $operator, $severity,
-  $UIX_impact, $use, $use_mode, $intro, $link_for_more_infos, $tags,
+  $level, $UIX_impact, $use, $use_mode, $intro, $link_for_more_infos, $tags,
   $consequences, $advice, $notes, $comment, $possible_values, $operting_system) = $data;
 
 

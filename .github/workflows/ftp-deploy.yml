@@ -12,10 +12,10 @@ jobs:
       id: upload
       uses: Creepios/sftp-action@v1.0.1
       with:
-        host: ${{ secrets.FTP_HOST }}
+        host: '${{ secrets.FTP_HOST }}'
         port: 22
-        username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
+        username: '${{ secrets.FTP_USERNAME }}'
+        password: '${{ secrets.FTP_PASSWORD }}'
         localPath: './'
         remotePath: 'www/policies_hardening_interface'
         

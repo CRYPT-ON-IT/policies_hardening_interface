@@ -13,11 +13,11 @@ jobs:
       with:
         dry-run: true
         log-level: verbose
-        server: ftp.cluster021.hosting.ovh.net
+        server: sftp.cluster021.hosting.ovh.net
         username: ataumophzi
         port: 21
         protocol: ftp
         local-dir: ./
-        server-dir: /home/ataumophzi/www/
+        server-dir: /www/
         password: ${{ secrets.ftp_password }}
         

@@ -46,7 +46,7 @@ function write_tr($data)
   list($id, $category, $name, $assessment_status, $method,
   $method_option, $get_command, $set_command, $user,
   $registry_path, $registry_item, $default_value, $recommended_value, $type_value, $operator, $severity,
-  $level, $UIX_impact, $use, $use_mode, $intro, $link_for_more_infos, $tags,
+  $level, $graphical_method, $UIX_impact, $use, $use_mode, $intro, $link_for_more_infos, $tags,
   $consequences, $advice, $notes, $comment, $possible_values, $operting_system) = $data;
 
 
@@ -176,6 +176,13 @@ function write_tr($data)
   /* intro */
   $intro_content = clean_text($intro);
 
+  /* Graphical Method */
+  $graphical_method_content = "";
+  if ($graphical_method!="") {
+    $graphical_method_content = clean_text($graphical_method);
+    $graphical_method_content="<h3>Graphical Method</h3><hr><div class=\"alert alert-primary\" role=\"alert\">$graphical_method_content</div>";
+  }
+
   /* Consequences */
   $consequences_content = "";
   if ($consequences!="") {
@@ -289,7 +296,11 @@ function write_tr($data)
               <hr>
                 <p>$intro_content</p>
                 <a target=\"_blank\" href=\"$link_for_more_infos\">Read more ></a>
+              <br>
+              <br>
+              $graphical_method_content
             </div>
+
 
             <!-- Table of settings -->
             <div class=\"col-4\">

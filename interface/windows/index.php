@@ -1,8 +1,6 @@
-<?php
 
-$link_style_master = "http://$_SERVER[HTTP_HOST]/windows_hardening_interface/style/master.css";
-
- ?>
+<!-- All links -->
+<?php include($_SERVER['DOCUMENT_ROOT']."/policies_hardening_interface/ressources/links.php");?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">

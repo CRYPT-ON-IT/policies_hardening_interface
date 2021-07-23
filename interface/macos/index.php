@@ -115,7 +115,7 @@ $link_style_master = "http://$_SERVER[HTTP_HOST]/windows_hardening_interface/sty
                   <th scope="col">
                     <select id="selected-severity" class="form-select form-select-sm" aria-label="Default select example">
                       <option value="0" selected>None</option>
-                      <option value="1">Hight</option>
+                      <option value="1">High</option>
                       <option value="2">Medium</option>
                       <option value="3">Low</option>
                     </select>

@@ -96,7 +96,7 @@ function write_tr($data)
   /* severity */
   switch ($severity) {
     case 'High':
-      $severity="<span class=\"badge bg-danger\">Hight</span>";
+      $severity="<span class=\"badge bg-danger\">High</span>";
       break;
     case 'Medium':
       $severity="<span class=\"badge bg-secondary\">Medium</span>";

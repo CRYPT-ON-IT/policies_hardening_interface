@@ -37,8 +37,8 @@ function severity_filter(){
   //$(".severity").parent().next().next().css("display","none")
   //$( "td.severity" ).parent("[active-filter-severity='true']").css("display","contents").attr({'active-filter-severity':'false'})
   switch (severity) {
-    case "Hight":
-      $( "td.severity:not(:contains('Hight'))" ).parent().css("display","none").attr('active-filter-severity','true')
+    case "High":
+      $( "td.severity:not(:contains('High'))" ).parent().css("display","none").attr('active-filter-severity','true')
       break;
     case "Medium":
       $( "td.severity:not(:contains('Medium'))" ).parent().css("display","none").attr('active-filter-severity','true')
@@ -88,7 +88,7 @@ function checkbox_filter(){
 var severity = decodeURIComponent(document.location.href.substring(document.location.href.indexOf("severity=")+9));
 var severity_number;
 switch (severity) {
-  case "Hight":
+  case "High":
     severity_number = 1;
     break;
   case "Medium":

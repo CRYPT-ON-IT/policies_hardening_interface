@@ -11,7 +11,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.1.0
       with:
-        protocol: ftp
+        protocol: ftps
         port: 21 # todo replace with your web hosts ftps port
         server: ftp.cluster021.hosting.ovh.net
         username: ${{ secrets.FTP_USERNAME }}

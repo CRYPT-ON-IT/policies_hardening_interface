@@ -2,24 +2,28 @@
 
 ## CSV file content
 
-The CSV file `interface/data/finding_list_machine_UIX.csv` has 26 categories including 14 from original [`finding_list_0x6d69636b_machine.csv`](https://github.com/0x6d69636b/windows_hardening/blob/master/lists/finding_list_0x6d69636b_machine.csv) and 12 more.
+The CSV file `interface/macos/data/finding_list_machine_UIX.csv` has 30 categories including 18 from original [`finding_list.csv`](https://github.com/ataumo/macos_hardening/blob/main/finding_list.csv) and 12 more.
 
-### First 14 original categories :
+### First 17 original categories :
 
 1. _ID_
 2. _Category_
 3. _Name_
-4. _Method_
-5. _MethodArgument_
-6. _RegistryPath_
-7. _RegistryItem_
-8. _ClassName_
-9. _Namespace_
-10. _Property_
-11. _DefaultValue_
-12. _RecommendedValue_
-13. _Operator_
-14. _Severity_
+4. _AssessmentStatus_
+5. _Method_
+6. _MethodOption_
+7. _GetCommand_
+8. _SetCommand_
+9. _User_
+10. _RegistryPath_
+11. _RegistryItem_
+12. _DefaultValue_
+13. _RecommendedValue_
+14. _TypeValue_
+15. _Operator_
+16. _Severity_
+17. _Level_
+18. _GraphicalMethod_
 
 ### The 12 added categories :
 

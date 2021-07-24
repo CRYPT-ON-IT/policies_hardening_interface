@@ -20,7 +20,7 @@
   <body data-spy="scroll">
     <section class="m-5">
       <div class="container mt-5" style="max-width:940px;">
-        <h1>Welcome to the macOS Hardening Interface</h1>
+        <h1>Welcome to the Windows Hardening Interface</h1>
         <hr>
           <div class="d-flex justify-content-end m-2">
             <!-- <a id="csv-generate" class="btn btn-success mx-1" role="button">

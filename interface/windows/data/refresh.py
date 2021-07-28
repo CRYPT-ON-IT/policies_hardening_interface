@@ -1,4 +1,4 @@
-
+#!/usr/bin/python
 
 import filecmp
 import requests

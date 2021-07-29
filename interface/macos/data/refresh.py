@@ -8,7 +8,7 @@ import os
 
 
 ####### Data #######
-git_file_url = "https://raw.githubusercontent.com/ataumo/macos_hardening/main/list.csv"
+git_file_url = "https://raw.githubusercontent.com/ataumo/macos_hardening/main/finding_list.csv"
 git_file_downloaded_target = "finding_list_ataumo_machine.csv"
 out_file_target = "finding_list_machine_UIX.csv"
 ##### End Data #####

@@ -60,9 +60,11 @@
         <div class="row">
           <!--////////////////////////// Nav list ///////////////////////////-->
           <div class="col-3">
-            <nav id="nav-list" class="sticky-top list-group" style="top:50px;border-radius: 1em;">
-              <?php include 'categories.php';?>
-            </nav>
+            <aside class="sticky-top" style="top:50px;">
+              <nav id="nav-list" class="list-group" style="border-radius: 1em;height: 80vh;overflow-y: auto;">
+                <?php include 'categories.php';?>
+              </nav>
+            </aside>
           </div>
           <!--///////////////////////// Tab content /////////////////////////-->
           <div class="col-9">

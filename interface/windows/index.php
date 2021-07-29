@@ -24,10 +24,6 @@
         <hr>
           <!-- Buttons part -->
           <div class="d-flex justify-content-end m-2">
-            <!-- <a id="csv-generate" class="btn btn-success mx-1" role="button">
-              <span id="csv-generate-loader" class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="display:none;"></span>
-              Generate CSV File
-            </a> -->
             <!-- Generate button -->
             <a id="csv-generate" class="btn btn-success mx-1" role="button">
               <span id="csv-generate-loader" class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="display:none;"></span>
@@ -47,7 +43,6 @@
             </a>
             <!--download="hardening-kitty.csv" href="data:application/csv;charset=utf-8,Error"-->
           </div>
-
           <!-- Alert part -->
           <div class="position-fixed top-0 end-0 p-3 " style="z-index: 5">
             <!-- Downloaded alert -->
@@ -62,8 +57,6 @@
             </div>
           </div>
         </div>
-
-
         <div class="row">
           <!--////////////////////////// Nav list ///////////////////////////-->
           <div class="col-3">
@@ -71,8 +64,6 @@
               <?php include 'categories.php';?>
             </nav>
           </div>
-
-
           <!--///////////////////////// Tab content /////////////////////////-->
           <div class="col-9">
 
@@ -146,20 +137,12 @@
               </tbody>
             </table>
           </div>
-
         </div>
-
-
-
-
-
-
       <!--///////////////////////////// Footer //////////////////////////////-->
       <footer class="pt-5 my-5 text-muted border-top">
         Powered by | <a href="https://github.com/0x6d69636b/windows_hardening">HardeningKitty</a> | <a href="https://getbootstrap.com">Bootstrap</a> | <a href="https://cryptonit.fr">Crypt.on it</a>
       </footer>
     </section>
-
   </body>
   <script type="text/javascript">
   /************ Gloabl value *************/

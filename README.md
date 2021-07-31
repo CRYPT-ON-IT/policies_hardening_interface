@@ -8,7 +8,7 @@
 
 To use [HardeningKitty](https://github.com/0x6d69636b/windows_hardening) service more easily, we have created an interface which permits better understanding of Windows security policies. Also, this interface allows you to generate a CSV file for the purpose of auditing or applying a configuration.
 
-Moreover, it works on macOS with [Tethys](https://github.com/ataumo/macos_hardening) based on HardeningKitty.
+Moreover, it works on macOS with [HardeningDoggy](https://github.com/ataumo/macos_hardening) based on HardeningKitty.
 
 This web-interface use php, therefore, it's necessary to run it on serveur environnement like [MAMP](https://www.mamp.info/en/downloads/) or similar.
 
@@ -54,22 +54,22 @@ Invoke-HardeningKitty -Mode HailMary -FileFindingList <file.csv>
 
 ### On macOS
 
-All details about Tethys is on this repository : https://github.com/ataumo/macos_hardening
+All details about HardeningDoggy is on this repository : https://github.com/ataumo/macos_hardening
 
-#### How can I use Tethys ?
+#### How can I use HardeningDoggy ?
 
 1. Download the HardeningKitty script [here](https://github.com/ataumo/macos_hardening)
 2. Run the bash script :
 ```bash
-./tethys.sh
+./doggy.sh
 ```
 
-#### How can I run Tethys audit mode ?
+#### How can I run HardeningDoggy audit mode ?
 
 1. Download your CSV file configuration
 2. Run this command :
 ```bash
-./tethys.sh -a -file <file.csv>
+./doggy.sh -a -file <file.csv>
 ```
 
 #### How can I apply a configuration ?
@@ -77,7 +77,7 @@ All details about Tethys is on this repository : https://github.com/ataumo/macos
 1. Download your CSV file configuration
 2. Run this command :
 ```bash
-./tethys.sh -r -file <file.csv>
+./doggy.sh -r -file <file.csv>
 ```
 
 ## Would you like to see more about this project ?

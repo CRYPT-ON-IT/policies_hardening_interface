@@ -1,11 +1,11 @@
 #!/usr/bin/python
 
+####### Packages #######
 import filecmp
 import requests
 import csv
 import os
-
-
+####### End Packages #######
 
 ####### Data #######
 git_file_url = "https://raw.githubusercontent.com/0x6d69636b/windows_hardening/master/lists/finding_list_0x6d69636b_machine.csv"
@@ -17,8 +17,7 @@ out_file_target = "finding_list_machine_UIX.csv"
 #out_file_target = "finding_list_machine_UIX_test.csv"
 ##### end test ####
 
-
-##### functions ######
+##### Functions ######
 def data_to_dico(name_file_target):
     file_dico ={}
     #open in read only mode
@@ -84,36 +83,41 @@ def fusion(new_file_dico,final_file_dico):
                     print("->Updated : "+new_file_dico["ID"][i]+" value of "+key+"\n     ("+final_file_dico[key][i]+" -> "+new_file_dico[key][i]+")")
                     final_file_dico[key][i]=new_file_dico[key][i]
     return final_file_dico
-##### end function #####
+##### End Function #####
 
+##### Main function #####
+def main():
+    # dowload new file
+    download_file(git_file_url,"downloaded_tmp_file.csv")
 
+    # convert data to dico
+    new_file_dico = data_to_dico("downloaded_tmp_file.csv")
+    final_file_dico = data_to_dico(out_file_target)
 
-# dowload new file
-download_file(git_file_url,"downloaded_tmp_file.csv")
+    # compare
+    diff = compare(new_file_dico,final_file_dico)
 
-# convert data to dico
-new_file_dico = data_to_dico("downloaded_tmp_file.csv")
-final_file_dico = data_to_dico(out_file_target)
+    if diff!=0:
+        response = input("\n\nDo you want to apply this update in ? y/N\n")
+        if response=='y':
+            # on modifie le nom du fichier
+            os.rename("downloaded_tmp_file.csv", git_file_downloaded_target)
 
-# compare
-diff = compare(new_file_dico,final_file_dico)
-
-if diff!=0:
-    response = input("\n\nDo you want to apply this update in ? y/N\n")
-    if response=='y':
-        # on modifie le nom du fichier
-        os.rename("downloaded_tmp_file.csv", git_file_downloaded_target)
-
-        final_file_dico = fusion(new_file_dico,final_file_dico)
-        ## remove fisrt raw
-        first_raw = final_file_dico['ID']
-        final_file_dico.pop('ID', None)
-        final_file_dico = dict(sorted(final_file_dico.items(), key=lambda x: x[1][0]))
-        write_csv_file(first_raw,final_file_dico,out_file_target)
-        print("\n\nYour file",out_file_target,"has been updated !")
-        print("If you edit this file through Exel or Numbers application, you have to reexport it.")
+            final_file_dico = fusion(new_file_dico,final_file_dico)
+            ## remove fisrt raw
+            first_raw = final_file_dico['ID']
+            final_file_dico.pop('ID', None)
+            final_file_dico = dict(sorted(final_file_dico.items(), key=lambda x: x[1][0]))
+            write_csv_file(first_raw,final_file_dico,out_file_target)
+            print("\n\nYour file",out_file_target,"has been updated !")
+            print("If you edit this file through Exel or Numbers application, you have to reexport it.")
+        else:
+            print("Quitting...")
+            exit(1)
     else:
-        print("Quitting...")
-        exit(1)
-else:
-    print("You Hardening is already up to date")
+        print("You Hardening is already up to date")
+##### Main function ######
+
+###### Main code #######
+if __name__ == "__main__":
+    main()

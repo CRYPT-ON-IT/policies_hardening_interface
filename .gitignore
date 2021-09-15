@@ -1,3 +1,4 @@
 .DS_Store
 *.numbers
 downloaded_tmp_file.csv
+*.csv#

@@ -41,11 +41,11 @@ pre{
   color:rgb(255, 123, 114);
 }
 
-.propriety-progressbar{
+.relevance-progressbar{
   background: linear-gradient(to right, rgb(222,43,64), rgb(245,174,48) 45%, rgb(0,123,77));
 }
 
-.progressbar-propriety{
+.progressbar-relevance{
   background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
   background-size: 1rem 1rem;
   border-right: solid black;

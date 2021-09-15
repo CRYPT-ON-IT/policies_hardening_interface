@@ -36,8 +36,9 @@ table{
   background: linear-gradient(to top right, #e2e3e5, #f8f9fa);
 }
 
-.alert-propriety{
-  background: linear-gradient(to right, rgba(246, 79, 79, 0.27), rgba(160, 243, 166, 0.3));
+.alert-relevance{
+  /*background: linear-gradient(to right, rgba(246, 79, 79, 0.27), rgba(160, 243, 166, 0.3));*/
+  border: solid gray 1px;
 }
 
 .table-orange{

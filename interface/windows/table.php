@@ -94,37 +94,37 @@ function write_tr($data)
   /**** Compute some values before row printing ****/
 
   /* severity */
-  $propriety_severity=0;
+  $relevance_severity=0;
   switch ($severity) {
     case 'High':
       $severity="<span class=\"badge bg-danger\">High</span>";
-      $propriety_severity=3;
+      $relevance_severity=3;
       break;
     case 'Medium':
       $severity="<span class=\"badge bg-secondary\">Medium</span>";
-      $propriety_severity=2;
+      $relevance_severity=2;
       break;
     case 'Low':
       $severity="<span class=\"badge bg-primary\">Low</span>";
-      $propriety_severity=1;
+      $relevance_severity=1;
       break;
   }
 
   /* UIX impact */
   $UIX_impact_content = "<span class=\"badge bg-secondary\">Not defined</span>";
-  $propriety_uix=0;
+  $relevance_uix=0;
   switch ($UIX_impact) {
     case '2':
       $UIX_impact_content="<span class=\"badge bg-danger\">Impact</span>";
-      $propriety_uix=1;
+      $relevance_uix=1;
       break;
     case '1':
       $UIX_impact_content="<span class=\"badge bg-warning text-dark\">Potentially</span>";
-      $propriety_uix=2;
+      $relevance_uix=2;
       break;
     case '0':
       $UIX_impact_content="<span class=\"badge bg-success\">No impact</span>";
-      $propriety_uix=3;
+      $relevance_uix=3;
       break;
   }
 
@@ -144,20 +144,20 @@ function write_tr($data)
 
   /* Mode */
   $use_mode_content="";
-  $propriety_mode=0;
+  $relevance_mode=0;
   if ($use_mode) {
     switch ($use_mode) {
       case 'Basic':
         $use_mode_content = "<span class=\"badge bg-light text-dark m-1\" style=\"border:solid 1px;\">$use_mode</span>";
-        $propriety_mode = 3;
+        $relevance_mode = 3;
         break;
       case 'Enterprise':
         $use_mode_content = "<span class=\"badge bg-secondary m-1\">$use_mode</span>";
-        $propriety_mode = 2;
+        $relevance_mode = 2;
         break;
       case 'StrongBox':
         $use_mode_content = "<span class=\"badge bg-dark m-1\">$use_mode</span>";
-        $propriety_mode = 1;
+        $relevance_mode = 1;
         break;
 
       default:
@@ -267,11 +267,11 @@ function write_tr($data)
     }
   }
 
-  /* Propriety */
-  $propriety_result = $propriety_severity*3+$propriety_uix*2+$propriety_mode*1;
-  $propriety_result = $propriety_result/6;
-  $propriety_percent = ($propriety_result-1)*100/2;
-  $propriety_percent = round($propriety_percent);
+  /* relevance */
+  $relevance_result = $relevance_severity*3+$relevance_uix*2+$relevance_mode*1;
+  $relevance_result = $relevance_result/6;
+  $relevance_percent = ($relevance_result-1)*100/2;
+  $relevance_percent = round($relevance_percent);
 
   /* Values */
   $possible_values_array = explode(":", $possible_values);
@@ -296,23 +296,6 @@ function write_tr($data)
             <div>$tags_content</div>
           </div>
 
-          <div class='row'>
-            <div class='col'>
-            </div>
-            <div class='col'>
-              <div class='alert alert-propriety'>
-                <h3>Propriety indicator</h3>
-                <span>$propriety_percent</span>
-                <div class='progress propriety-progressbar'>
-                  <div class='progress-bar progressbar-propriety bg-success' role='progressbar' style='width:$propriety_percent%;' aria-valuenow='$propriety_result' aria-valuemin='0' aria-valuemax='100'></div>
-                </div>
-              </div>
-
-            </div>
-            <div class='col'>
-            </div>
-          </div>
-
           <hr>
 
           <!---- Data content ---->
@@ -324,6 +307,14 @@ function write_tr($data)
               <hr>
                 <p>$intro_content</p>
                 <a target=\"_blank\" href=\"$link_for_more_infos\">Read more ></a>
+              <hr>
+              <div class='alert alert-relevance'>
+                <h4>Relevance indicator</h4>
+                <span>$relevance_percent</span>
+                <div class='progress relevance-progressbar'>
+                  <div class='progress-bar progressbar-relevance bg-success' role='progressbar' style='width:$relevance_percent%;' aria-valuenow='$relevance_result' aria-valuemin='0' aria-valuemax='100'></div>
+                </div>
+              </div>
             </div>
 
             <!-- Table of settings -->

@@ -36,6 +36,10 @@ table{
   background: linear-gradient(to top right, #e2e3e5, #f8f9fa);
 }
 
+.alert-propriety{
+  background: linear-gradient(to right, rgba(246, 79, 79, 0.27), rgba(160, 243, 166, 0.3));
+}
+
 .table-orange{
   --bs-table-bg: #f9ebd7;
   --bs-table-striped-bg: #ecdbcc;

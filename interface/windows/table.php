@@ -210,9 +210,14 @@ function write_tr($data)
   }
 
   /* OS */
-  $operting_system_content = "";
-  if ($operting_system) {
-    $operting_system_content = "<h4>OS</h4><div class=\"alert alert-primary\" role=\"alert\">$operting_system</div>";
+  $operating_system_content = "";
+  $operating_system_string = str_replace(";", "</li><li>", $operating_system);
+  if ($operating_system) {
+    $operating_system_content = "<h4>OS</h4><div class=\"alert alert-primary\" role=\"alert\">
+    <ul>
+      <li>$operating_system_string</li>
+    </ul>
+    </div>";
   }
 
   /* command */

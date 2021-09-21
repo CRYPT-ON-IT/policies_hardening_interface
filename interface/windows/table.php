@@ -47,7 +47,7 @@ function write_tr($data)
   $method_argument, $registry_path, $registry_item, $classname, $namespace,
   $property, $default_value, $recommended_value, $operator, $severity,
   $UIX_impact, $use, $use_mode, $intro, $link_for_more_infos, $tags,
-  $consequences, $advice, $notes, $comment, $possible_values, $operting_system) = $data;
+  $consequences, $advice, $notes, $comment, $possible_values, $operating_system) = $data;
 
 
   /* category title printing */
@@ -210,9 +210,14 @@ function write_tr($data)
   }
 
   /* OS */
-  $operting_system_content = "";
-  if ($operting_system) {
-    $operting_system_content = "<h4>OS</h4><div class=\"alert alert-primary\" role=\"alert\">$operting_system</div>";
+  $operating_system_content = "";
+  $operating_system_string = str_replace(";", "</li><li>", $operating_system);
+  if ($operating_system) {
+    $operating_system_content = "<h4>OS</h4><div class=\"alert alert-primary\" role=\"alert\">
+    <ul>
+      <li>$operating_system_string</li>
+    </ul>
+    </div>";
   }
 
   /* command */
@@ -334,7 +339,7 @@ function write_tr($data)
                     <ul>
                       <li>$values</li>
                     </ul>
-                  </code></li>
+                  </code>
                   <div>
                   </div>
             </div>
@@ -346,7 +351,7 @@ function write_tr($data)
                 $consequences_content
                 $advice_content
                 $notes_content
-                $operting_system_content
+                $operating_system_content
             </div>
 
           </div>

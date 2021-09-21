@@ -47,7 +47,7 @@ function write_tr($data)
   $method_argument, $registry_path, $registry_item, $classname, $namespace,
   $property, $default_value, $recommended_value, $operator, $severity,
   $UIX_impact, $use, $use_mode, $intro, $link_for_more_infos, $tags,
-  $consequences, $advice, $notes, $comment, $possible_values, $operting_system) = $data;
+  $consequences, $advice, $notes, $comment, $possible_values, $operating_system) = $data;
 
 
   /* category title printing */
@@ -346,7 +346,7 @@ function write_tr($data)
                 $consequences_content
                 $advice_content
                 $notes_content
-                $operting_system_content
+                $operating_system_content
             </div>
 
           </div>

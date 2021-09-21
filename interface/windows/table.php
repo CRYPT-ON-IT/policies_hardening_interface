@@ -339,7 +339,7 @@ function write_tr($data)
                     <ul>
                       <li>$values</li>
                     </ul>
-                  </code></li>
+                  </code>
                   <div>
                   </div>
             </div>

@@ -1,6 +1,7 @@
 <?php
 
-$link_style_master = "/policies_hardening_interface/style/master.css";
+#$link_style_master = "/policies_hardening_interface/style/master.css";
+$link_style_master = "/style/master.css";
 
 $link_style_bootstrap="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css";
 $style_bootstrap_intregrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x";

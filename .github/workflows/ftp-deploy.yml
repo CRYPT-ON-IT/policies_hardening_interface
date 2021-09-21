@@ -18,4 +18,4 @@ jobs:
         password: '${{ secrets.PHI_FTP_PASSWORD }}'
         localPath: './'
         #remotePath: 'www/policies_hardening_interface'
-        remotePath: 'phi'
+        remotePath: 'phi/policies_hardening_interface'

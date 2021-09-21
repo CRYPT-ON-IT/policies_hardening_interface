@@ -156,7 +156,8 @@
   </body>
   <script type="text/javascript">
   /************ Gloabal value *************/
-  var global_link = "/policies_hardening_interface/interface"
+  //var global_link = "/policies_hardening_interface/interface"
+  var global_link = "/interface"
   /************ End Global Value ****************/
 
   /************ To update position scroll-spy when refresh ******************/

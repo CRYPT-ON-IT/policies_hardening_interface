@@ -1,6 +1,6 @@
 
 <!-- All links -->
-<?php include($_SERVER['DOCUMENT_ROOT']."/ressources/links.php");?>
+<?php include($_SERVER['DOCUMENT_ROOT']."/policies_hardening_interface/ressources/links.php");?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -149,8 +149,7 @@
   </body>
   <script type="text/javascript">
   /************ Gloabl value *************/
-  //var global_link = "/policies_hardening_interface/interface"
-  var global_link = "/interface"
+  var global_link = "/policies_hardening_interface/interface"
   /************ End Global Value ****************/
 
   /************ To update position scroll-spy when refresh ******************/

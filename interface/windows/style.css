@@ -84,3 +84,7 @@ pre code{
   border: 0;
   font-size: small;
 }
+
+.td-value-code{
+  max-width: 400px;
+}

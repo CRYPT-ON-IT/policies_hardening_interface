@@ -27,6 +27,7 @@ pre{
   line-height: 1.45;
   background-color: #161b22;
   border-radius: 1em;
+  width: -webkit-max-content;
 }
 
 .code-command {

@@ -28,12 +28,23 @@
       <div class="container mt-5" style="max-width:940px;">
         <h1>Welcome to the Windows Hardening Interface</h1>
         <hr>
-        <!-- Breadcrumb part -->
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item active" aria-current="page">Windows</li>
-          </ol>
-        </nav>
+        <div class="row">
+          <div class="col">
+            <!-- Breadcrumb part -->
+            <?php include($link_motor_breadcrumb);?>
+          </div>
+          <div class="col">
+            <!-- Choice OS part -->
+            <div class="list-group">
+              <a href="/policies_hardening_interface/interface/windows/endpoint" class="list-group-item list-group-item-action">
+                Endpoint
+              </a>
+              <a href="/policies_hardening_interface/interface/windows/server" class="list-group-item list-group-item-action">
+                Server
+              </a>
+            </div>
+          </div>
+        </div>
         <hr>
           <!-- Buttons part -->
           <div class="d-flex justify-content-end m-2">

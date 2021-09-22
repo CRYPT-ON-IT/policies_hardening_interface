@@ -18,6 +18,7 @@
         <h1>Welcome to the Windows Hardening Interface</h1>
         <!-- Breadcrumb part -->
         <?php include($link_motor_breadcrumb);?>
+        <hr>
         <div class="row">
 
           <div class="col">

@@ -52,3 +52,7 @@ pre{
   border-right: solid black;
   background-color: rgba(25, 135, 84, 0)!important;
 }
+
+.list-group{
+  border-radius: 1em;
+}

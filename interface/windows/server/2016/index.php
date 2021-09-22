@@ -1,10 +1,12 @@
 
+<?php $link_csv_file = "finding_list_cis_microsoft_windows_server_2016_1607_1.2.0_machine.csv"; ?>
+
 <!-- All links -->
 <?php include($_SERVER['DOCUMENT_ROOT']."/policies_hardening_interface/ressources/links.php");?>
 <?php $link_style_interface="/policies_hardening_interface/interface/windows/style.css";?>
 <?php $link_script_interface_filter="/policies_hardening_interface/interface/windows/scripts/filter.js";?>
 <?php $link_script_interface_generator="/policies_hardening_interface/interface/windows/scripts/generate_csv.js";?>
-<?php $link_csv_file = "finding_list_cis_microsoft_windows_server_2016_1607_1.2.0_machine.csv"; ?>
+
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -66,9 +68,7 @@
           <div class="col-3">
             <aside class="sticky-top" style="top:50px;">
               <nav id="nav-list" class="list-group" style="border-radius: 1em;height: 80vh;overflow-y: auto;">
-                <?php
-                  include 'categories.php';
-                ?>
+                <?php include 'categories.php';?>
               </nav>
             </aside>
           </div>

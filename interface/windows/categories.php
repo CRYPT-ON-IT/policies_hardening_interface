@@ -1,6 +1,8 @@
 <?php
 
-$link_csv_file = "data/finding_list_machine_UIX.csv";
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!//
+// Do not forget to define $link_csv_file before include this file.
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!//
 
 //
 // This code will load all categories to write them in the left nav bar
@@ -18,12 +20,16 @@ function write_category($data)
   $UIX_impact, $use, $use_mode, $intro, $link_for_more_infos,
   $consequences, $advice, $notes, $possible_values, $operting_system) = $data;
 
+  /* clean id string */
+  // to replace '.' with '-'
+  $id_cleaned = str_replace(".", "-", $id);
+
 
   /* to print category title */
   if ($global_categ!=$category) {
     $categoty_content = preg_replace("/[^a-zA-Z0-9]+/", "", $category);
     echo "
-    <a class=\"list-group-item list-group-item-action\" href=\"#$categoty_content-$id\"><b>$id - </b>$category</a>
+    <a class=\"list-group-item list-group-item-action\" href=\"#$categoty_content-$id_cleaned\"><b>$id - </b>$category</a>
     ";
     $global_categ = $category;
   }

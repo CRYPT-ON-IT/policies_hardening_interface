@@ -1,6 +1,12 @@
 
+<?php $link_csv_file = "data/finding_list_machine_UIX.csv"; ?>
+
 <!-- All links -->
 <?php include($_SERVER['DOCUMENT_ROOT']."/policies_hardening_interface/ressources/links.php");?>
+<?php $link_style_interface="/policies_hardening_interface/interface/windows/style.css";?>
+<?php $link_script_interface_filter="/policies_hardening_interface/interface/windows/scripts/filter.js";?>
+<?php $link_script_interface_generator="/policies_hardening_interface/interface/windows/scripts/generate_csv.js";?>
+
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -13,7 +19,7 @@
     <link href="<?php echo $link_style_bootstrap ?>" rel="stylesheet" integrity="<?php echo $style_bootstrap_intregrity ?>" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
     <script src="<?php echo $link_script_bootstrap ?>" integrity="<?php echo $script_bootstrap_intregrity ?>" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="<?php echo $link_style_interface ?>">
     <link rel="stylesheet" href="<?php echo $link_style_master ?>">
     <script src="<?php echo $link_script_ajax ?>"></script>
   </head>
@@ -182,8 +188,8 @@
 
 
   </script>
-  <script type="text/javascript" src="scripts/filter.js"></script>
-  <script type="text/javascript" src="scripts/generate_csv.js"></script>
+  <script type="text/javascript" src="<?php echo $link_script_interface_filter ?>"></script>
+  <script type="text/javascript" src="<?php echo $link_script_interface_generator ?>"></script>
   <script type="text/javascript">
   </script>
 </html>

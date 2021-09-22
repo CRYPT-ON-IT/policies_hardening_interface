@@ -1,6 +1,9 @@
 <?php
 
-$link_csv_file = "data/finding_list_machine_UIX.csv";
+//$link_csv_file = "finding_list_cis_microsoft_windows_server_2016_1607_1.2.0_machine.csv";
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!//
+// Do not forget to define $link_csv_file before include this file.
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!//
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -49,12 +52,16 @@ function write_tr($data)
   $UIX_impact, $use, $use_mode, $intro, $link_for_more_infos, $tags,
   $consequences, $advice, $notes, $comment, $possible_values, $operating_system) = $data;
 
+  /* clean id string */
+  // to replace '.' with '-'
+  $id_cleaned = str_replace(".", "-", $id);
+
 
   /* category title printing */
   if ($global_categ!=$category) {
     $categoty_content = preg_replace("/[^a-zA-Z0-9]+/", "", $category);
     echo "
-    <tr id=\"$categoty_content-$id\">
+    <tr id=\"$categoty_content-$id_cleaned\">
       <td colspan=\"8\" class=\"table-secondary title-tr\">
         <h4>$category</h4>
       </td>
@@ -88,7 +95,7 @@ function write_tr($data)
   }
   /********/
 
-  $class_content_global = "content-$id";
+  $class_content_global = "content-$id_cleaned";
 
 
   /**** Compute some values before row printing ****/
@@ -168,13 +175,13 @@ function write_tr($data)
 
   /**** Row printing ****/
   echo"
-  <tr id=\"data-$id\" class=\"$class_content $class_content_global tr-visible row-content\" csv-data=\"$id,$recommended_value,$check_box_value\" data-tags=\"$tags\" active-filter-uix=\"false\" active-filter-severity=\"false\">
-    <th class=\"btn-link csv-id\" scope=\"row\" data-bs-toggle=\"collapse\" data-bs-target=\"#data-content-$id\" role=\"button\" data-target=\"#data-content-$id\">
-      <a href=\"#data-$id\" >$id</a>
+  <tr id=\"data-$id_cleaned\" class=\"$class_content $class_content_global tr-visible row-content\" csv-data=\"$id_cleaned,$recommended_value,$check_box_value\" data-tags=\"$tags\" active-filter-uix=\"false\" active-filter-severity=\"false\">
+    <th class=\"btn-link csv-id\" scope=\"row\" data-bs-toggle=\"collapse\" data-bs-target=\"#data-content-$id_cleaned\" role=\"button\" data-target=\"#data-content-$id_cleaned\">
+      <a href=\"#data-$id_cleaned\" >$id</a>
     </th>
     <td class=\"mode\"> $use_mode_content</td>
     <td>$name</td>
-    <td class=\"severity\" data-content=\"data-content-$id\" >$severity</td>
+    <td class=\"severity\" data-content=\"data-content-$id_cleaned\" >$severity</td>
     <td class=\"uix_impact\" >$UIX_impact_content</td>
     <td>$default_value_content</td>
     <td class=\"value_to_use\">$recommended_value_content</td>
@@ -292,7 +299,7 @@ function write_tr($data)
   <!---- Toggle content ---->
   <tr class=\"$class_content_global\">
     <td colspan=\"8\" class=\"hiddenRow\">
-      <div id=\"data-content-$id\" class=\"accordian-body collapse\" style=\"\">
+      <div id=\"data-content-$id_cleaned\" class=\"accordian-body collapse\" style=\"\">
         <div class=\"px-2\">
 
           <!---- Header content ---->

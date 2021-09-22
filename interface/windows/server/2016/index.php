@@ -5,7 +5,7 @@
 <?php include($_SERVER['DOCUMENT_ROOT']."/policies_hardening_interface/ressources/links.php");?>
 <?php $link_style_interface="/policies_hardening_interface/interface/windows/style.css";?>
 <?php $link_script_interface_filter="/policies_hardening_interface/interface/windows/scripts/filter.js";?>
-<?php $link_script_interface_generator="/policies_hardening_interface/interface/windows/scripts/generate_csv.js";?>
+<?php $link_script_interface_generator="/policies_hardening_interface/interface/windows/scripts/generate_csv_simple.js";?>
 
 
 <!DOCTYPE html>

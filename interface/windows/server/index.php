@@ -1,7 +1,7 @@
 
 <!-- All links -->
 <?php include($_SERVER['DOCUMENT_ROOT']."/policies_hardening_interface/ressources/links.php");?>
-<?php $link_style_interface="/policies_hardening_interface/interface/windows/style.css";?>
+
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">

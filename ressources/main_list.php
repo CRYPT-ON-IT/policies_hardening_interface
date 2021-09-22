@@ -2,11 +2,15 @@
 
 
 //we use '$dirs' from breadcrumb
-$aria_current_state=array("true","false","active","");
+$aria_current_state=array("","","","");
 
 if (in_array("server", $original_dirs)) {
-    $aria_current_state=array("false","true","","active");
+  $aria_current_state=array("false","true","","active");
+}elseif (in_array("endpoint", $original_dirs)) {
+  $aria_current_state=array("true","false","active","");
 }
+
+
 
  ?>
 

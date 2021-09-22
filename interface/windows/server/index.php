@@ -18,30 +18,25 @@
     <link rel="stylesheet" href="<?php echo $link_style_master ?>">
     <script src="<?php echo $link_script_ajax ?>"></script>
   </head>
-  <body>
+  <body data-spy="scroll">
     <section class="m-5">
       <div class="container mt-5" style="max-width:940px;">
-        <div class="">
-          <hr>
-          <!-- Breadcrumb part -->
-          <?php include($link_motor_breadcrumb);?>
-          <hr>
-        </div>
+
+        <!-- |||||||||||||||| HEADER PART |||||||||||||||| -->
+        <h1>Welcome to the Windows Hardening Interface</h1>
+        <!-- Breadcrumb part -->
+        <?php include($link_motor_breadcrumb);?>
+        <hr>
         <div class="row">
+          <!-- Choice OS part -->
           <div class="col">
             <?php include($link_motor_main_list);?>
           </div>
           <div class="col">
-            <div class="list-group">
-              <a href="/policies_hardening_interface/interface/windows/server/2012" class="list-group-item list-group-item-action">
-                2012
-              </a>
-              <a href="/policies_hardening_interface/interface/windows/server/2016" class="list-group-item list-group-item-action">
-                2016
-              </a>
-            </div>
+            <?php include($link_motor_dir_reader);?>
           </div>
         </div>
+        <!-- |||||||||||||||| HEADER PART |||||||||||||||| -->
 
       </div>
     </section>

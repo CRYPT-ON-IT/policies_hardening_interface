@@ -21,16 +21,15 @@
   <body>
     <section class="m-5">
       <div class="container mt-5" style="max-width:940px;">
+        <div class="">
+          <hr>
+          <!-- Breadcrumb part -->
+          <?php include($link_motor_breadcrumb);?>
+          <hr>
+        </div>
         <div class="row">
           <div class="col">
-            <div class="list-group">
-              <a href="/policies_hardening_interface/interface/windows/endpoint" class="list-group-item list-group-item-action">
-                Endpoint
-              </a>
-              <a href="/policies_hardening_interface/interface/windows/server" class="list-group-item list-group-item-action active" aria-current="true">
-                Server
-              </a>
-            </div>
+            <?php include($link_motor_main_list);?>
           </div>
           <div class="col">
             <div class="list-group">

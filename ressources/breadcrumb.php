@@ -10,6 +10,7 @@ $actual_link_parsed = parse_url($actual_link, PHP_URL_PATH);
 
 // convert string to array
 $dirs=explode("/",$actual_link_parsed);
+$original_dirs=$dirs;
 
 // remove last element
 $actual_page = array_pop($dirs);

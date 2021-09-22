@@ -28,6 +28,14 @@
       <div class="container mt-5" style="max-width:940px;">
         <h1>Welcome to the Windows Hardening Interface</h1>
         <hr>
+        <!-- Breadcrumb part -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/policies_hardening_interface/interface/windows/">Windows</a></li>
+            <li class="breadcrumb-item"><a href="/policies_hardening_interface/interface/windows/Server">Server</a></li>
+            <li class="breadcrumb-item active" aria-current="page">2016</li>
+          </ol>
+        </nav>
           <!-- Buttons part -->
           <div class="d-flex justify-content-end m-2">
             <!-- Generate button -->

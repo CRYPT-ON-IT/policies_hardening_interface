@@ -21,6 +21,8 @@ $link_script_interface_generator="/policies_hardening_interface/interface/window
 //// PHP code (motor)
 // HEAD
 $link_motor_head = $_SERVER['DOCUMENT_ROOT']."/policies_hardening_interface/ressources/head.php";
+// BUTTONS
+$link_motor_buttons = $_SERVER['DOCUMENT_ROOT']."/policies_hardening_interface/ressources/buttons_header.php";
 // READER MOTORS
 $link_motor_breadcrumb = $_SERVER['DOCUMENT_ROOT']."/policies_hardening_interface/ressources/breadcrumb.php";
 $link_motor_main_list = $_SERVER['DOCUMENT_ROOT']."/policies_hardening_interface/ressources/main_list.php";

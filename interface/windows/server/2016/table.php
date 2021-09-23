@@ -225,7 +225,7 @@ function write_tr($data)
 
   /* command */
   $command_content ="";
-  if (strcmp($method, "Registy")) {
+  if (strcmp($method, "Registry")) {
     $command_get = "<span class=\"code-command\">Get-ItemProperty </span><span class=\"code-option\">-path </span><span class=\"code-argument\">$registry_path </span><span class=\"code-option\">-name </span><span class=\"code-argument\">'$registry_item'</span>";
     $command_set = "<span class=\"code-command\">Set-ItemProperty </span><span class=\"code-option\">-path </span><span class=\"code-argument\">$registry_path </span><span class=\"code-option\">-name </span><span class=\"code-argument\">'$registry_item'</span><span class=\"code-option\">-value </span><span class=\"code-argument\">$recommended_value</span>";
     $command_content = "
@@ -253,12 +253,12 @@ function write_tr($data)
     <br>";
   }
 
-  /* Registy */
+  /* Registry */
   $registry_content="";
   if ($registry_path) {
     //$registry_path_content = str_replace("\\", "<br>\\", $registry_path);
     $registry_content = "
-    <h4>Registy</h4>
+    <h4>Registry</h4>
     <h6>RegistryPath : </h6>
     <pre><code>$registry_path</code></pre>
     <h6>RegistryItem : </h6>

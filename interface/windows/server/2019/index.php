@@ -30,5 +30,9 @@
 
       </div>
     </section>
+    <!--///////////////////////////// Footer //////////////////////////////-->
+    <footer>
+      <?php include($link_motor_footer); ?>
+    </footer>
   </body>
 </html>

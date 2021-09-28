@@ -5,7 +5,7 @@
 function CSVReader(csv_data_list) {
   var data=""
   var txtFile = new XMLHttpRequest();
-   txtFile.open("GET", global_link+"/windows/data/finding_list_0x6d69636b_machine.csv", true);
+   txtFile.open("GET", global_link+link_original_list, true);
    txtFile.onreadystatechange = function()
    {
         if (txtFile.readyState === 4)

@@ -29,4 +29,10 @@ $link_motor_main_list = $_SERVER['DOCUMENT_ROOT']."/policies_hardening_interface
 $link_motor_dir_reader = $_SERVER['DOCUMENT_ROOT']."/policies_hardening_interface/ressources/dir_reader.php";
 $link_motor_footer = $_SERVER['DOCUMENT_ROOT']."/policies_hardening_interface/ressources/footer.php";
 $link_motor_version_reader = $_SERVER['DOCUMENT_ROOT']."/policies_hardening_interface/ressources/version_reader.php";
+$link_motor_csv_reader = $_SERVER['DOCUMENT_ROOT']."/policies_hardening_interface/interface/windows/csv_reader.php";
+// TABLE
+$link_motor_table_parser = $_SERVER['DOCUMENT_ROOT']."/policies_hardening_interface/interface/windows/table_parser.php";
+$link_motor_categories = $_SERVER['DOCUMENT_ROOT']."/policies_hardening_interface/interface/windows/categories.php";
+$link_motor_table_content = $_SERVER['DOCUMENT_ROOT']."/policies_hardening_interface/interface/windows/table_content.php";
+
  ?>

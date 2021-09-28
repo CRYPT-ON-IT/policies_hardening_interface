@@ -46,7 +46,8 @@
   </body>
   <script type="text/javascript">
   /************ Gloabl value *************/
-  var global_link = "/policies_hardening_interface/interface"
+  var global_link = ""
+  var link_original_list="<?php echo $link_csv_original_file ?>"
   /************ End Global Value ****************/
 
   /************ To update position scroll-spy when refresh ******************/

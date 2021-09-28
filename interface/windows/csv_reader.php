@@ -14,8 +14,11 @@
         <div class="row">
           <div class="col">
             <!-- Choice OS part -->
-            <div class="col">
+            <div class="col-6">
               <?php include($link_motor_main_list);?>
+            </div>
+            <div class="col-6">
+
             </div>
           </div>
         </div>

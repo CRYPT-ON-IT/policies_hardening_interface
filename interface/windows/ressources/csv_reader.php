@@ -3,7 +3,7 @@
     <?php include($link_motor_head);?>
   </head>
   <body data-spy="scroll">
-    <section class="m-5">
+    <section class="m-5 m-xl-4 m-lg-3 m-md-2 m-sm-1">
       <div class="container mt-5" style="max-width:940px;">
 
         <!-- |||||||||||||||| HEADER PART |||||||||||||||| -->
@@ -12,29 +12,47 @@
         <?php include($link_motor_breadcrumb);?>
         <hr>
         <div class="row">
-          <div class="col">
-            <!-- Choice OS part -->
-            <div class="col-6">
-              <?php include($link_motor_main_list);?>
-            </div>
-            <div class="col-6">
-
-            </div>
+          <!-- Choice OS part -->
+          <div class="col-6">
+            <?php include($link_motor_main_list);?>
           </div>
         </div>
         <!-- |||||||||||||||| HEADER PART |||||||||||||||| -->
-
-
         <hr>
-        <?php include($link_motor_buttons); ?>
+
+        <div class="row">
+          <div class="col-6">
+            <table class="table" style="border: solid 1px gray;">
+              <tbody>
+                <?php
+                echo "<tr><th>Reference</th><td>$reference_name</td></tr>";
+                if ($reference_date!="") {
+                  echo "<tr><th>Date</th><td>$reference_date</td></tr>";
+                }
+                if ($reference_version!="") {
+                  echo "<tr><th>Version</th><td>$reference_version</td></tr>";
+                }
+                if ($reference_type!="") {
+                  echo "<tr><th>Type</th><td>$reference_type</td></tr>";
+                }
+                 ?>
+              </tbody>
+            </table>
+          </div>
         </div>
+
+
+
+
+        <?php include($link_motor_buttons); ?>
+      </div>
         <div class="row">
           <!--////////////////////////// Nav list ///////////////////////////-->
-          <div class="col-3">
+          <div class="col-3 col-xxl-2">
               <?php include($link_motor_categories);?>
           </div>
           <!--///////////////////////// Tab content /////////////////////////-->
-          <div class="col-9">
+          <div class="col-9 col-xxl-10">
               <?php include($link_motor_table_content); ?>
           </div>
         </div>

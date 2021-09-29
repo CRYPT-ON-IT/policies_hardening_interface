@@ -12,10 +12,10 @@
         <hr>
         <div class="row">
           <!-- Choice OS part -->
-          <div class="col">
+          <div class="col-6">
             <?php include($link_motor_main_list);?>
           </div>
-          <div class="col">
+          <div class="col-6">
             <?php include($link_motor_dir_reader);?>
           </div>
         </div>

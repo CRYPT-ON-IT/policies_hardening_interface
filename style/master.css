@@ -56,3 +56,7 @@ pre{
 .list-group{
   border-radius: 1em;
 }
+
+ul{
+  margin-bottom: 0;
+}

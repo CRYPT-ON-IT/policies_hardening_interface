@@ -4,6 +4,13 @@
 <!--file that will be read in to generate csv file (original list)-->
 <?php $link_csv_original_file = "finding_list_cis_microsoft_windows_server_2016_1607_1.2.0_machine.csv"; ?>
 
+<?php
+$reference_name = "CIS"; //* necessary value
+$reference_date = "05/27/2020";       // optional
+$reference_version = "1.2.0"; // optional
+$reference_type = "machine";    // optional
+ ?>
+
 <!-- All links -->
 <?php include($_SERVER['DOCUMENT_ROOT']."/policies_hardening_interface/ressources/links.php");?>
 

@@ -1,3 +1,5 @@
+<aside class="sticky-top" style="top:50px;">
+  <nav id="nav-list" class="list-group" style="border-radius: 1em;height: 80vh;overflow-y: auto;">
 <?php
 
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!//
@@ -49,3 +51,5 @@ if (($handle = fopen($link_csv_file, "r")) !== FALSE) {
 }
 
  ?>
+</nav>
+</aside>

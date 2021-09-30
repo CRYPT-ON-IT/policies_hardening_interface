@@ -57,6 +57,14 @@ pre{
   border-radius: 1em;
 }
 
-ul{
+.alert ul{
   margin-bottom: 0;
+}
+
+.input-group-text{
+  border-radius: 1em;
+}
+
+.form-control{
+  border-radius: 1em;
 }

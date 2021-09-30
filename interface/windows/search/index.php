@@ -21,7 +21,6 @@
         </div>
         <div id="result-search" class="list-group">
           <?php
-          http://localhost:8888/policies_hardening_interface/interface/windows/endpoint/365%20Apps/
 
 
             $target = $_SERVER['DOCUMENT_ROOT'];
@@ -61,7 +60,8 @@
     $("#input-search").on("keyup", function() {
       var value = $(this).val().toLowerCase();
       $("#result-search a").filter(function() {
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        //$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        $(this).toggle($(this).text().toLowerCase().includes(value))
       });
     });
     });

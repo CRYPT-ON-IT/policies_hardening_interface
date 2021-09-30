@@ -9,6 +9,7 @@ $reference_name = "Microsoft Security Baseline"; //* necessary value
 $reference_date = "03/04/2021";       // optional
 $reference_version = "Final"; // optional
 $reference_type = "machine";    // optional
+$reference_source_url = "https://techcommunity.microsoft.com/t5/microsoft-security-baselines/security-baseline-for-microsoft-edge-version-89/ba-p/2186265"; // optional
  ?>
 
 <!-- All links -->

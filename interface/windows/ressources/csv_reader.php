@@ -111,5 +111,15 @@
   <script type="text/javascript" src="<?php echo $link_script_interface_filter ?>"></script>
   <script type="text/javascript" src="<?php echo $link_script_interface_generator ?>"></script>
   <script type="text/javascript">
+    var current_id = window.location.hash;
+    // split content
+    var current_id_array = current_id.split('-');
+    var new_current_id = current_id_array[0]+"-content-"+current_id_array[1]
+    // remove first char (#)
+    new_current_id = new_current_id.substring(1);
+    var myCollapse = document.getElementById(new_current_id)
+    var bsCollapse = new bootstrap.Collapse(myCollapse, {
+      toggle: true
+    })
   </script>
 </html>

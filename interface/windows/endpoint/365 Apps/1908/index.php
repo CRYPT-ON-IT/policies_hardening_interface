@@ -1,15 +1,15 @@
 
 <!--file that will be read in interface (ux list)-->
-<?php $link_csv_file = "finding_list_msft_security_baseline_office_365_v1908_machine.csv"; ?>
+<?php $link_csv_file = "finding_list_msft_security_baseline_edge_93_machine.csv"; ?>
 <!--file that will be read in to generate csv file (original list)-->
-<?php $link_csv_original_file = "finding_list_msft_security_baseline_office_365_v1908_machine.csv"; ?>
+<?php $link_csv_original_file = "finding_list_msft_security_baseline_edge_93_machine.csv"; ?>
 
 <?php
 $reference_name = "Microsoft Security Baseline"; //* necessary value
-$reference_date = "09/24/2019";       // optional
+$reference_date = "09/13/2021";       // optional
 $reference_version = "Final"; // optional
 $reference_type = "machine";    // optional
-$reference_source_url = "https://techcommunity.microsoft.com/t5/microsoft-security-baselines/security-baseline-for-office-365-proplus-v1908-sept-2019-final/ba-p/873084";
+$reference_source_url = "https://techcommunity.microsoft.com/t5/microsoft-security-baselines/security-baseline-for-microsoft-edge-v93/ba-p/2744505";
  ?>
 
 <!-- All links -->

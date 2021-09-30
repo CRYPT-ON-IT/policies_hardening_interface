@@ -18,6 +18,9 @@ $link_style_interface="/policies_hardening_interface/interface/windows/style.css
 $link_script_interface_filter="/policies_hardening_interface/interface/windows/scripts/filter.js";
 $link_script_interface_generator="/policies_hardening_interface/interface/windows/scripts/generate_csv.js";
 
+//// PHP code
+$link_page_search = "/policies_hardening_interface/interface/windows/search";
+
 //// PHP code (motor)
 // HEAD
 $link_motor_head = $_SERVER['DOCUMENT_ROOT']."/policies_hardening_interface/ressources/head.php";

@@ -185,6 +185,14 @@ function write_tr($data)
     <td class=\"uix_impact\" >$UIX_impact_content</td>
     <td>$default_value_content</td>
     <td class=\"value_to_use\">$recommended_value_content</td>
+    <!--<td class=\"value_to_use\">
+      <select id=\"selected-uix\" class=\"form-select form-select-sm\" aria-label=\"Default select example\">
+              <option value='0' selected=''><code>$recommended_value_content</code></option>
+              <option value='1'>Impact</option>
+              <option value='2'>Potentially</option>
+              <option value='3'>No impact</option>
+      </select>
+    </td>-->
     <td>
       <input class=\"form-check-input check-policy\" type=\"checkbox\" value=\"\" $check_box_value>
     </td>
@@ -288,8 +296,15 @@ function write_tr($data)
   /* Values */
   $possible_values_array = explode(":", $possible_values);
   $type = $possible_values_array[0];
-  $values = $possible_values_array[1];
-  $values = str_replace(";", "</li><li>", $values);
+  $values="";
+  if (count($possible_values_array)>1) {
+    $values = $possible_values_array[1];
+    $values = str_replace(";", "</li><li>", $values);
+  }
+
+
+
+
 
   //**** Blank row printing ****//
   echo "<tr class=\"$class_content_global\" ></tr>";

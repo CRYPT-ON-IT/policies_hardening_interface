@@ -9,6 +9,7 @@ $reference_name = "0x6d69636b"; //* necessary value
 $reference_date = "date";       // optional
 $reference_version = "version"; // optional
 $reference_type = "machine";    // optional
+$reference_source_url = "";     // optional
  ?>
 
 <!-- All links -->

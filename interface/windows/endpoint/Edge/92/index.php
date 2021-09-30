@@ -1,14 +1,15 @@
 
 <!--file that will be read in interface (ux list)-->
-<?php $link_csv_file = "finding_list_msft_security_baseline_windows_server_20h2_dc_machine.csv"; ?>
+<?php $link_csv_file = "finding_list_msft_security_baseline_edge_92_machine.csv"; ?>
 <!--file that will be read in to generate csv file (original list)-->
-<?php $link_csv_original_file = "finding_list_msft_security_baseline_windows_server_20h2_dc_machine.csv"; ?>
+<?php $link_csv_original_file = "finding_list_msft_security_baseline_edge_92_machine.csv"; ?>
 
 <?php
 $reference_name = "Microsoft Security Baseline"; //* necessary value
-$reference_date = "09/13/2021";       // optional
-$reference_version = "1.0"; // optional
+$reference_date = "07/26/2021";       // optional
+$reference_version = "Final"; // optional
 $reference_type = "machine";    // optional
+$reference_source_url = "https://techcommunity.microsoft.com/t5/microsoft-security-baselines/security-baseline-for-microsoft-edge-v92/ba-p/2563679"; // optional
  ?>
 
 <!-- All links -->

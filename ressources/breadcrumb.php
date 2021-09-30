@@ -31,9 +31,13 @@ $accum = "";
     <?php
     foreach ($dirs as $key=>$val) {
       $accum=$accum.'/'.$val;
-      echo "<li class=\"breadcrumb-item\"><a href=\"$domain_link$accum\">$val</a></li>";
+      //replace %20 by space
+      $val_cleaned = str_replace("%20", " ", $val);
+      echo "<li class=\"breadcrumb-item\"><a href=\"$domain_link$accum\">$val_cleaned</a></li>";
     }
-    echo "<li class=\"breadcrumb-item active\" aria-current=\"page\">$actual_page</li>";
+    //replace %20 by space
+    $actual_page_cleaned = str_replace("%20", " ", $actual_page);
+    echo "<li class=\"breadcrumb-item active\" aria-current=\"page\">$actual_page_cleaned</li>";
      ?>
   </ol>
 </nav>

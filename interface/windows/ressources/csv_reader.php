@@ -20,6 +20,7 @@
         <!-- |||||||||||||||| HEADER PART |||||||||||||||| -->
         <hr>
 
+        <!-- |||||||||||||||| REFERENCE PART |||||||||||||||| -->
         <div class="row">
           <div class="col-6">
             <table class="table" style="border: solid 1px gray;">
@@ -35,12 +36,21 @@
                 if ($reference_type!="") {
                   echo "<tr><th>Type</th><td>$reference_type</td></tr>";
                 }
+                if ($reference_source_url!="") {
+                  $reference_source_url_host = parse_url($reference_source_url)["host"];
+                  echo "<tr>
+                    <th>Source</th>
+                    <td>
+                      <a target=\"_blank\" href=\"$reference_source_url\">$reference_source_url_host</a>
+                    </td>
+                  </tr>";
+                }
                  ?>
               </tbody>
             </table>
           </div>
         </div>
-
+        <!-- |||||||||||||||| REFERENCE PART |||||||||||||||| -->
 
 
 

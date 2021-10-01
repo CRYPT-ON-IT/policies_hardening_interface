@@ -23,7 +23,7 @@
         <!-- |||||||||||||||| REFERENCE PART |||||||||||||||| -->
         <div class="row">
           <div class="col-6">
-            <table class="table" style="border: solid 1px gray;">
+            <table class="table" style="border: solid 1px rgb(227, 227, 227);">
               <tbody>
                 <?php
                 echo "<tr><th>Reference</th><td>$reference_name</td></tr>";

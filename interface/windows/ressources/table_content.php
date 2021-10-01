@@ -47,8 +47,7 @@
           </th>
           <th scope="col">
             <div class="input-group input-group-sm">
-              <span class="input-group-text" id="inputGroup-sizing-default">Search</span>
-              <input id="input-search-name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+              <input id="input-search-name" type="text" class="form-control" placeholder="Search by name" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
             </div>
           </th>
           <th scope="col">

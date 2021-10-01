@@ -51,8 +51,13 @@
           </div>
         </div>
         <!-- |||||||||||||||| REFERENCE PART |||||||||||||||| -->
-
-
+        <hr>
+        <!-- |||||||||||||||| SEARCH PART ||||||||||||||||||| -->
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Search</span>
+          <input id="input-search-policy" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <!-- |||||||||||||||| SEARCH PART ||||||||||||||||||| -->
 
         <?php include($link_motor_buttons); ?>
       </div>
@@ -129,6 +134,23 @@
 
   </script>
   <script type="text/javascript">
+
+  $(document).ready(function(){
+    $("#input-search-policy").on("keyup", function(event) {
+      // Number 13 is the "Enter" key on the keyboard
+      if (event.keyCode === 13) {
+          var value = $(this).val().toLowerCase();
+          $("table tr.row-content").filter(function() {
+            //$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+          });
+      }
+    });
+  });
+
+
+
+
   //// Code to find text in policy name
 
   /// on key up method

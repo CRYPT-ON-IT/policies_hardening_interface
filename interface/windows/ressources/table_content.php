@@ -45,7 +45,12 @@
               <option value="3">StrongBox</option>
             </select>
           </th>
-          <th scope="col"></th>
+          <th scope="col">
+            <div class="input-group input-group-sm">
+              <span class="input-group-text" id="inputGroup-sizing-default">Search</span>
+              <input id="input-search-name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+          </th>
           <th scope="col">
             <select id="selected-severity" class="form-select form-select-sm" aria-label="Default select example">
               <option value="0" selected>None</option>

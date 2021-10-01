@@ -111,15 +111,49 @@
   <script type="text/javascript" src="<?php echo $link_script_interface_filter ?>"></script>
   <script type="text/javascript" src="<?php echo $link_script_interface_generator ?>"></script>
   <script type="text/javascript">
+  // Code to open cotent policy when its hash is in url
+
     var current_id = window.location.hash;
-    // split content
-    var current_id_array = current_id.split('-');
-    var new_current_id = current_id_array[0]+"-content-"+current_id_array[1]
-    // remove first char (#)
-    new_current_id = new_current_id.substring(1);
-    var myCollapse = document.getElementById(new_current_id)
-    var bsCollapse = new bootstrap.Collapse(myCollapse, {
-      toggle: true
-    })
+
+    if (current_id!="") {
+      // split content
+      var current_id_array = current_id.split('-');
+      var new_current_id = current_id_array[0]+"-content-"+current_id_array[1]
+      // remove first char (#)
+      new_current_id = new_current_id.substring(1);
+      var myCollapse = document.getElementById(new_current_id)
+      var bsCollapse = new bootstrap.Collapse(myCollapse, {
+        toggle: true
+      })
+    }
+
+  </script>
+  <script type="text/javascript">
+  //// Code to find text in policy name
+
+  /// on key up method
+  // $(document).ready(function(){
+  // $("#input-search-name").on("keyup", function() {
+  //   var value = $(this).val().toLowerCase();
+  //   $("table tr.row-content td.policy-name").filter(function() {
+  //     //$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+  //     $(this).parent().toggle($(this).text().toLowerCase().indexOf(value) > -1)
+  //   });
+  // });
+  // });
+
+  /// on key "enter" method
+  $(document).ready(function(){
+    $("#input-search-name").on("keyup", function(event) {
+      // Number 13 is the "Enter" key on the keyboard
+      if (event.keyCode === 13) {
+          var value = $(this).val().toLowerCase();
+          $("table tr.row-content td.policy-name").filter(function() {
+            //$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            $(this).parent().toggle($(this).text().toLowerCase().indexOf(value) > -1)
+          });
+      }
+    });
+  });
   </script>
 </html>

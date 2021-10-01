@@ -161,9 +161,9 @@ function write_tr($data)
 
   /* use check box */
   $check_box_value = "not-checked";
-  if ($use=="1") {
-    $check_box_value="checked";
-  }
+  // if ($use=="1") {
+  //   $check_box_value="checked";
+  // }
 
   /* Mode */
   $use_mode_content="";

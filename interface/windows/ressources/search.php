@@ -6,10 +6,6 @@
 
  <div class="list-group">
    <?php
-   // function OwnScanDir($value='')
-   // {
-   //   // code...
-   // }
 
      $dir_enumerate = scandir("/");
      foreach ($dir_enumerate as $dir_item) {

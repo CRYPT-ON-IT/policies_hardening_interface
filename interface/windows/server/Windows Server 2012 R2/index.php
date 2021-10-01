@@ -9,6 +9,7 @@ $reference_name = "CIS"; //* necessary value
 $reference_date = "04/28/2020"; // optional
 $reference_version = "v2.4.0"; // optional
 $reference_type = "machine";    // optional
+$reference_source_url = ""; // optional
  ?>
 
 <!-- All links -->

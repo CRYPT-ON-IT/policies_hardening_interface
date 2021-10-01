@@ -315,7 +315,7 @@ function write_tr($data)
   <tr class=\"$class_content_global\">
     <td colspan=\"8\" class=\"hiddenRow\">
       <div id=\"data-content-$id_cleaned\" class=\"accordian-body collapse\" style=\"\">
-        <div class=\"px-2\">
+        <div class=\"p-xl-5 p-md-3 p-sm-2\">
 
           <!---- Header content ---->
           <div>

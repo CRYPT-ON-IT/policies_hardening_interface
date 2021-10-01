@@ -46,11 +46,27 @@ function clean_text($string){
 function write_tr($data)
 {
   global $global_categ;
-  list($id, $category, $name, $method,
-  $method_argument, $registry_path, $registry_item, $classname, $namespace,
-  $property, $default_value, $recommended_value, $operator, $severity,
-  $UIX_impact, $use, $use_mode, $intro, $link_for_more_infos, $tags,
-  $consequences, $advice, $notes, $comment, $possible_values, $operating_system) = $data;
+  // define all values to a void string
+  $id = $category = $name= $method=
+  $method_argument= $registry_path= $registry_item= $classname= $namespace=
+  $property= $default_value= $recommended_value= $operator= $severity=
+  $UIX_impact= $use= $use_mode= $intro= $link_for_more_infos= $tags=
+  $consequences= $advice= $notes= $comment= $possible_values= $operating_system = "";
+
+  //// Getting values ////
+  // If we have all columns in CSV
+  if (count($data)>14) {
+    list($id, $category, $name, $method,
+    $method_argument, $registry_path, $registry_item, $classname, $namespace,
+    $property, $default_value, $recommended_value, $operator, $severity,
+    $UIX_impact, $use, $use_mode, $intro, $link_for_more_infos, $tags,
+    $consequences, $advice, $notes, $comment, $possible_values, $operating_system) = $data;
+  }else {
+    list($id, $category, $name, $method,
+    $method_argument, $registry_path, $registry_item, $classname, $namespace,
+    $property, $default_value, $recommended_value, $operator, $severity) = $data;
+  }
+
 
   /* clean id string */
   // to replace '.' with '-'
@@ -180,7 +196,7 @@ function write_tr($data)
       <a href=\"#data-$id\" >$id</a>
     </th>
     <td class=\"mode\"> $use_mode_content</td>
-    <td>$name</td>
+    <td class=\"policy-name\">$name</td>
     <td class=\"severity\" data-content=\"data-content-$id_cleaned\" >$severity</td>
     <td class=\"uix_impact\" >$UIX_impact_content</td>
     <td>$default_value_content</td>

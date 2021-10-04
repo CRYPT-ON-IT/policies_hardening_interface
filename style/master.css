@@ -68,3 +68,7 @@ pre{
 .form-control{
   border-radius: 1em;
 }
+
+.value_to_use{
+  max-width: 150px;
+}

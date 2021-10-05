@@ -28,6 +28,8 @@ pre{
   background-color: #161b22;
   border-radius: 1em;
   /*width: -webkit-max-content;*/
+  word-break: normal;
+  word-wrap: break-word;
 }
 
 .code-command {
@@ -71,4 +73,13 @@ pre{
 
 .value_to_use{
   max-width: 150px;
+  max-height: 100px !important;
+  overflow-y: -webkit-paged-x;
+}
+
+span{
+}
+
+.div-command-pre-wrapper{
+
 }

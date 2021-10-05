@@ -1,6 +1,7 @@
 <?php
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!//
-// Do not forget to define $link_motor_table_parser before include this file.
+// Do not forget to define $link_motor_table_parser before to include this file.
+// Do not forget to include csv_parser.php before to include this file.
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!//
  ?>
 
@@ -75,7 +76,7 @@
       </thead>
 
       <tbody>
-        <?php include $link_motor_table_parser;?>
+        <?php echo $ALL_table_content;?>
       </tbody>
     </table>
   </main>

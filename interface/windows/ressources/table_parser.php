@@ -153,10 +153,12 @@ function write_tr($data)
 
   /* default value */
   $default_value_content = str_replace(";", ";<br>", $default_value);
+  $default_value_content = str_replace(",", ",<br>", $default_value_content);
   $default_value_content = "<code>$default_value_content</code>";
 
   /* recommended value */
   $recommended_value_content = str_replace(";", ";<br>", $recommended_value);
+  $recommended_value_content = str_replace(",", ",<br>", $recommended_value_content);
   $recommended_value_content = "<code>$recommended_value_content</code>";
 
   /* use check box */

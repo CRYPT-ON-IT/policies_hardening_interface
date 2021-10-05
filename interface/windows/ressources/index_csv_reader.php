@@ -64,10 +64,12 @@
         <div class="row">
           <!--////////////////////////// Nav list ///////////////////////////-->
           <div class="col-3 col-xxl-3">
+              <?php include $link_motor_table_parser; ?>
               <?php include($link_motor_categories);?>
           </div>
           <!--///////////////////////// Tab content /////////////////////////-->
           <div class="col-9 col-xxl-9">
+
               <?php include($link_motor_table_content); ?>
           </div>
         </div>

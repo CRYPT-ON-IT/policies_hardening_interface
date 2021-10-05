@@ -192,8 +192,9 @@ function write_tr($data)
   }
 
   /**** Row printing ****/
+  // in this part, in csv-data, we use ,-, to separate values
   echo"
-  <tr id=\"data-$id\" class=\"$class_content $class_content_global tr-visible row-content\" csv-data=\"$id,$recommended_value,$check_box_value\" data-tags=\"$tags\" active-filter-uix=\"false\" active-filter-severity=\"false\">
+  <tr id=\"data-$id\" class=\"$class_content $class_content_global tr-visible row-content\" csv-data=\"$id,-,$recommended_value,-,$check_box_value\" data-tags=\"$tags\" active-filter-uix=\"false\" active-filter-severity=\"false\">
     <th class=\"btn-link csv-id\" scope=\"row\" data-bs-toggle=\"collapse\" data-bs-target=\"#data-content-$id_cleaned\" role=\"button\" data-target=\"#data-content-$id_cleaned\">
       <a href=\"#data-$id\" >$id</a>
     </th>

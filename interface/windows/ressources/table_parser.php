@@ -253,17 +253,21 @@ function write_tr($data)
     </div>";
   }
 
-  /* command */
+  /* Command */
   $command_content ="";
-  if (strcmp($method, "Registry")) {
+  if ($method == "Registry") {
     $command_get = "<span class=\"code-command\">Get-ItemProperty </span><span class=\"code-option\">-path </span><span class=\"code-argument\">$registry_path </span><span class=\"code-option\">-name </span><span class=\"code-argument\">'$registry_item'</span>";
-    $command_set = "<span class=\"code-command\">Set-ItemProperty </span><span class=\"code-option\">-path </span><span class=\"code-argument\">$registry_path </span><span class=\"code-option\">-name </span><span class=\"code-argument\">'$registry_item'</span><span class=\"code-option\">-value </span><span class=\"code-argument\">$recommended_value</span>";
+    $command_set = "<span class=\"code-command\">Set-ItemProperty </span><span class=\"code-option\">-path </span><span class=\"code-argument\">$registry_path </span><span class=\"code-option\">-name </span><span class=\"code-argument\">'$registry_item' </span><span class=\"code-option\">-value </span><span class=\"code-argument\">$recommended_value</span>";
     $command_content = "
     <h4>Powershell Command</h4>
     <h6>Get Value : </h6>
+    <div class=\"div-command-pre-wrapper potition-relative\">
     <pre> $command_get</pre>
+    </div>
     <h6>Set Value : </h6>
+    <div class=\"div-command-pre-wrapper\">
     <pre> $command_set</pre>
+    </div>
     <br>";
   }
 
@@ -290,9 +294,11 @@ function write_tr($data)
     $registry_content = "
     <h4>Registry</h4>
     <h6>RegistryPath : </h6>
-    <pre><code>$registry_path</code></pre>
+    <div class=\"div-command-pre-wrapper\">
+    <pre><code><span class=\"code-argument\">$registry_path</span></code></pre>
+    </div>
     <h6>RegistryItem : </h6>
-    <pre><code>$registry_item</code></pre>
+    <pre><code><span class=\"code-argument\">$registry_item</span></code></pre>
     <br>";
   }
 
@@ -382,6 +388,8 @@ function write_tr($data)
                   </code>
                   <div>
                   </div>
+                <hr>
+                $command_content
             </div>
 
             <!-- More Informations -->

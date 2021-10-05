@@ -28,7 +28,7 @@ pre{
   background-color: #161b22;
   border-radius: 1em;
   /*width: -webkit-max-content;*/
-  word-break: normal;
+  word-break: break-all;
   word-wrap: break-word;
 }
 
@@ -72,14 +72,24 @@ pre{
 }
 
 .value_to_use{
-  max-width: 150px;
+  /* max-width: 150px;
   max-height: 100px !important;
-  overflow-y: -webkit-paged-x;
+  overflow-y: -webkit-paged-x; */
 }
 
 span{
+  /* word-break: break-all; */
 }
 
 .div-command-pre-wrapper{
-
+  word-break: break-all;
+  color: gainsboro;
+  padding:15px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #161b22;
+  border-radius: 1em;
+  margin-top: 0;
+  margin-bottom: 1rem;
 }

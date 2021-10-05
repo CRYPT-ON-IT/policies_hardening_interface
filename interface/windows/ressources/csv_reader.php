@@ -54,7 +54,7 @@
         <hr>
         <!-- |||||||||||||||| SEARCH PART ||||||||||||||||||| -->
         <div class="input-group mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-default">Search</span>
+          <span class="input-group-text" id="inputGroup-sizing-default">Search a policy</span>
           <input id="input-search-policy" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
         </div>
         <!-- |||||||||||||||| SEARCH PART ||||||||||||||||||| -->

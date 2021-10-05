@@ -22,6 +22,8 @@ $policies_nbr = 0;
 
 $ALL_table_content = "";
 $ALL_categories_content = "";
+$ALL_progress_view = "";
+$ALL_counter_view = "";
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -504,6 +506,78 @@ if (($handle = fopen($link_csv_file, "r")) !== FALSE) {
     }
     fclose($handle);
 }
+
+
+////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////  Progress view //////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+$policies_nbr = $row-1;
+$done_policies_nbr = $policies_nbr-$done_policies_nbr;
+$calc_global = intval($done_policies_nbr*100/$policies_nbr);
+$calc_goal = intval($checked_policies_nbr*100/50);
+$ALL_progress_view = "
+<!---- Progress view ---->
+<div class=\"alert alert-primary\" role=\"alert\" style=\"max-width:400px;\">
+  <h4>Global progress - $done_policies_nbr/$policies_nbr</h4>
+  <div class=\"progress\">
+    <div class=\"progress-bar progress-bar-striped bg-success\" role=\"progressbar\" style=\"width: $calc_global%;\" aria-valuenow=\"$calc_global\" aria-valuemin=\"0\" aria-valuemax=\"100\">$calc_global%</div>
+  </div>
+  <h4>Goal progress - $checked_policies_nbr/50</h4>
+  <div class=\"progress\">
+    <div class=\"progress-bar progress-bar-striped bg-success\" role=\"progressbar\" style=\"width: $calc_goal%;\" aria-valuenow=\"$calc_goal\" aria-valuemin=\"0\" aria-valuemax=\"100\">$calc_goal%</div>
+  </div>
+</div>
+<!---- End progress view ---->
+";
+
+$ALL_counter_view = "
+<!---- Numbers view ---->
+<div style=\"max-width:400px;\">
+  <table class=\"table\" style=\"border: solid 1px rgb(227, 227, 227);\">
+            <thead>
+              <tr>
+                <th></th>
+                <th>All policies</th>
+                <th>Checked policies</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Mode</th>
+                <td>mode 1</td>
+                <td>mode 2</td>
+              </tr>
+              <tr>
+                <th>High</th>
+                <td>22</td>
+                <td>18</td>
+              </tr>
+              <tr>
+                <th>Medium</th>
+                <td>22</td>
+                <td>18</td>
+              </tr>
+              <tr>
+                <th>Low</th>
+                <td>22</td>
+                <td>18</td>
+              </tr>
+              <tr>
+                <th>No impact</th>
+                <td>22</td>
+                <td>18</td>
+              </tr>
+              <tr>
+                <th>Potentially</th>
+                <td>22</td>
+                <td>18</td>
+              </tr>
+            </tbody>
+    </table>
+</div>
+<!---- End Numbers view ---->
+";
 
 
  ?>

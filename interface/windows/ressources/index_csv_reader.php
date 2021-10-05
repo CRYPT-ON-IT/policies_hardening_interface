@@ -62,14 +62,16 @@
         <?php include($link_motor_buttons); ?>
       </div>
         <div class="row">
+          <!-- CSV file loader -->
+          <?php include($link_motor_table_parser);?>
           <!--////////////////////////// Nav list ///////////////////////////-->
           <div class="col-3 col-xxl-3">
-              <?php include $link_motor_table_parser; ?>
               <?php include($link_motor_categories);?>
           </div>
           <!--///////////////////////// Tab content /////////////////////////-->
           <div class="col-9 col-xxl-9">
-
+              <?php echo "$ALL_progress_view";
+              echo "$ALL_counter_view";?>
               <?php include($link_motor_table_content); ?>
           </div>
         </div>

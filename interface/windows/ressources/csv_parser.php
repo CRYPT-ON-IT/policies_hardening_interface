@@ -1,10 +1,13 @@
 <?php
 
-//$link_csv_file = "finding_list_cis_microsoft_windows_server_2016_1607_1.2.0_machine.csv";
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!//
 // Do not forget to define $link_csv_file before include this file.
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!//
 
+//
+// This code will load all categories in $ALL_categories_content to write them
+// in the left nav bar and load all parsed policies in $ALL_table_content
+//
 
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////  Variable part ////////////////////////////////
@@ -17,10 +20,41 @@ $done_policies_nbr = 0;
 $checked_policies_nbr = 0;
 $policies_nbr = 0;
 
+$ALL_table_content = "";
+$ALL_categories_content = "";
+
 
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////  Function part ////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
+
+
+/* clean command */
+// Input : String
+// Output : String
+// Exemple :
+// [Disable-WindowsOptionalFeature -Online smb1protocol] to
+//[<span class="code-command">Disable-WindowsOptionalFeature </span><span class="code-option">-Online </span><span class="code-argument">smb1protocol </span>]
+function CleanCommand($command)
+{
+  $command_return="";
+  $command_array = explode(" ", $command);
+  $command_return = $command_return."<span class=\"code-command\">$command_array[0] </span>";
+  array_shift($command_array); // remove first element
+  if (count($command_array)>=1) {
+    foreach ($command_array as $key => $value) {
+      if (strlen($value)>=1) {
+        if ($value[0]=='-') {
+          $command_return = $command_return."<span class=\"code-option\">$value </span>";
+        }else {
+          $command_return = $command_return."<span class=\"code-argument\">$value </span>";
+        }
+      }
+
+    }
+  }
+  return $command_return;
+}
 
 
 /* clean text */
@@ -46,12 +80,15 @@ function clean_text($string){
 function write_tr($data)
 {
   global $global_categ;
+  global $ALL_table_content;
+  global $ALL_categories_content;
   // define all values to a void string
   $id = $category = $name= $method=
   $method_argument= $registry_path= $registry_item= $classname= $namespace=
   $property= $default_value= $recommended_value= $operator= $severity=
   $UIX_impact= $use= $use_mode= $intro= $link_for_more_infos= $tags=
-  $consequences= $advice= $notes= $comment= $possible_values= $operating_system = "";
+  $consequences= $advice= $notes= $setting_command= $getting_command=
+  $comment= $possible_values= $operating_system = "";
 
   //// Getting values ////
   // If we have all columns in CSV
@@ -60,7 +97,8 @@ function write_tr($data)
     $method_argument, $registry_path, $registry_item, $classname, $namespace,
     $property, $default_value, $recommended_value, $operator, $severity,
     $UIX_impact, $use, $use_mode, $intro, $link_for_more_infos, $tags,
-    $consequences, $advice, $notes, $comment, $possible_values, $operating_system) = $data;
+    $consequences, $advice, $notes, $setting_command, $getting_command,
+    $comment, $possible_values, $operating_system) = $data;
   }else {
     list($id, $category, $name, $method,
     $method_argument, $registry_path, $registry_item, $classname, $namespace,
@@ -76,12 +114,15 @@ function write_tr($data)
   /* category title printing */
   if ($global_categ!=$category) {
     $categoty_content = preg_replace("/[^a-zA-Z0-9]+/", "", $category);
-    echo "
+    $ALL_table_content = $ALL_table_content."
     <tr id=\"$categoty_content-$id_cleaned\">
       <td colspan=\"8\" class=\"table-secondary title-tr\">
         <h4>$category</h4>
       </td>
     </tr>
+    ";
+    $ALL_categories_content = $ALL_categories_content."
+    <a class=\"list-group-item list-group-item-action\" href=\"#$categoty_content-$id_cleaned\"><b>$id - </b>$category</a>
     ";
     $global_categ = $category;
   }
@@ -193,7 +234,7 @@ function write_tr($data)
 
   /**** Row printing ****/
   // in this part, in csv-data, we use ,-, to separate values
-  echo"
+  $ALL_table_content = $ALL_table_content."
   <tr id=\"data-$id\" class=\"$class_content $class_content_global tr-visible row-content\" csv-data=\"$id,-,$recommended_value,-,$check_box_value\" data-tags=\"$tags\" active-filter-uix=\"false\" active-filter-severity=\"false\">
     <th class=\"btn-link csv-id\" scope=\"row\" data-bs-toggle=\"collapse\" data-bs-target=\"#data-content-$id_cleaned\" role=\"button\" data-target=\"#data-content-$id_cleaned\">
       <a href=\"#data-$id\" >$id</a>
@@ -255,38 +296,65 @@ function write_tr($data)
   }
 
   /* Command */
+  // Getting and setting commands are automatically generated for Registry method policies
   $command_content ="";
-  if ($method == "Registry") {
-    $command_get = "<span class=\"code-command\">Get-ItemProperty </span><span class=\"code-option\">-path </span><span class=\"code-argument\">$registry_path </span><span class=\"code-option\">-name </span><span class=\"code-argument\">'$registry_item'</span>";
-    $command_set = "<span class=\"code-command\">Set-ItemProperty </span><span class=\"code-option\">-path </span><span class=\"code-argument\">$registry_path </span><span class=\"code-option\">-name </span><span class=\"code-argument\">'$registry_item' </span><span class=\"code-option\">-value </span><span class=\"code-argument\">$recommended_value</span>";
-    $command_content = "
-    <h4>Powershell Command</h4>
-    <h6>Get Value : </h6>
-    <div class=\"div-command-pre-wrapper\">
-    <code>$command_get</code>
-    </div>
-    <h6>Set Value : </h6>
-    <div class=\"div-command-pre-wrapper\">
-    <code> $command_set</code>
-    </div>
-    <br>";
+  if ($method == "Registry" || $getting_command || $setting_command) {
+    $command_content = "<h4>Powershell Command</h4>";
+    if ($method == "Registry") {
+      $command_get = "<span class=\"code-command\">Get-ItemProperty </span><span class=\"code-option\">-path </span><span class=\"code-argument\">'$registry_path' </span><span class=\"code-option\">-name </span><span class=\"code-argument\">'$registry_item'</span>";
+      $command_set = "<span class=\"code-command\">Set-ItemProperty </span><span class=\"code-option\">-path </span><span class=\"code-argument\">'$registry_path' </span><span class=\"code-option\">-name </span><span class=\"code-argument\">'$registry_item' </span><span class=\"code-option\">-value </span><span class=\"code-argument\">$recommended_value</span>";
+      $command_content = $command_content."
+      <h6>Get Value : </h6>
+      <div class=\"div-command-pre-wrapper\">
+      <code>$command_get</code>
+      </div>
+      <h6>Set Value : </h6>
+      <div class=\"div-command-pre-wrapper\">
+      <code> $command_set</code>
+      </div>
+      <br>";
+    }else {
+      if ($getting_command) {
+        $command_get = CleanCommand($getting_command);
+        $command_content = $command_content."
+        <h6>Getting Command : </h6>
+        <div class=\"div-command-pre-wrapper\">
+        <code>$command_get</code>
+        </div>";
+      }
+      if ($setting_command) {
+        $command_set = CleanCommand($setting_command);
+        $command_content = $command_content."
+        <h6>Setting Command : </h6>
+        <div class=\"div-command-pre-wrapper\">
+        <code> $command_set</code>
+        </div>";
+      }
+    }
+    $command_content = $command_content."<br>";
   }
-
-  // $command_content="<div class=\"div-command-pre-wrapper\">TLS_CHACHA20_POLY1305_SHA256,TLS_AES_256_GCM_SHA384,TLS_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA</div>";
-
-
 
   /* Method */
   $method_content="";
   if ($method) {
     $method_argument_content = "";
     if ($method_argument) {
-      $method_argument_content = "<h6>Method Argument :</h6><div class=\"div-command-pre-wrapper\"><code>$method_argument</code></div></li>";
+      $method_argument_content = "
+      <h6>Method Argument :</h6>
+      <div class=\"div-command-pre-wrapper\">
+        <code>
+          <span class=\"code-argument\">$method_argument</span>
+        </code>
+      </div>";
     }
     $method_content = "
     <h4>Method</h4>
     <h6>Method : </h6>
-    <div class=\"div-command-pre-wrapper\"><code>$method</code></div>
+    <div class=\"div-command-pre-wrapper\">
+      <code>
+        <span class=\"code-command\">$method</span>
+      </code>
+    </div>
     $method_argument_content
     <br>";
   }
@@ -337,10 +405,10 @@ function write_tr($data)
 
 
   //**** Blank row printing ****//
-  echo "<tr class=\"$class_content_global\" ></tr>";
+  $ALL_table_content = $ALL_table_content."<tr class=\"$class_content_global\" ></tr>";
 
   //**** Content row printing ****//
-  echo "
+  $ALL_table_content = $ALL_table_content."
   <!---- Toggle content ---->
   <tr class=\"$class_content_global\">
     <td colspan=\"8\" class=\"hiddenRow\">
@@ -436,31 +504,6 @@ if (($handle = fopen($link_csv_file, "r")) !== FALSE) {
     }
     fclose($handle);
 }
-
-
-////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////  Progress view //////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-
-$policies_nbr = $row-1;
-$done_policies_nbr = $policies_nbr-$done_policies_nbr;
-$calc_global = intval($done_policies_nbr*100/$policies_nbr);
-$calc_goal = intval($checked_policies_nbr*100/50);
-echo "
-<!---- Progress view ---->
-<div class=\"alert alert-primary\" role=\"alert\" style=\"max-width:400px;\">
-  <h4>Global progress - $done_policies_nbr/$policies_nbr</h4>
-  <div class=\"progress\">
-    <div class=\"progress-bar progress-bar-striped bg-success\" role=\"progressbar\" style=\"width: $calc_global%;\" aria-valuenow=\"$calc_global\" aria-valuemin=\"0\" aria-valuemax=\"100\">$calc_global%</div>
-  </div>
-  <h4>Goal progress - $checked_policies_nbr/50</h4>
-  <div class=\"progress\">
-    <div class=\"progress-bar progress-bar-striped bg-success\" role=\"progressbar\" style=\"width: $calc_goal%;\" aria-valuenow=\"$calc_goal\" aria-valuemin=\"0\" aria-valuemax=\"100\">$calc_goal%</div>
-  </div>
-</div>
-<!---- End progress view ---->
-";
-
 
 
  ?>

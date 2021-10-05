@@ -261,15 +261,18 @@ function write_tr($data)
     $command_content = "
     <h4>Powershell Command</h4>
     <h6>Get Value : </h6>
-    <div class=\"div-command-pre-wrapper potition-relative\">
-    <pre> $command_get</pre>
+    <div class=\"div-command-pre-wrapper\">
+    <code>$command_get</code>
     </div>
     <h6>Set Value : </h6>
     <div class=\"div-command-pre-wrapper\">
-    <pre> $command_set</pre>
+    <code> $command_set</code>
     </div>
     <br>";
   }
+
+  // $command_content="<div class=\"div-command-pre-wrapper\">TLS_CHACHA20_POLY1305_SHA256,TLS_AES_256_GCM_SHA384,TLS_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA</div>";
+
 
 
   /* Method */
@@ -277,12 +280,12 @@ function write_tr($data)
   if ($method) {
     $method_argument_content = "";
     if ($method_argument) {
-      $method_argument_content = "<h6>Method Argument :</h6><pre><code>$method_argument</code></pre></li>";
+      $method_argument_content = "<h6>Method Argument :</h6><div class=\"div-command-pre-wrapper\"><code>$method_argument</code></div></li>";
     }
     $method_content = "
     <h4>Method</h4>
     <h6>Method : </h6>
-    <pre> <code>$method</code></pre>
+    <div class=\"div-command-pre-wrapper\"><code>$method</code></div>
     $method_argument_content
     <br>";
   }
@@ -295,10 +298,12 @@ function write_tr($data)
     <h4>Registry</h4>
     <h6>RegistryPath : </h6>
     <div class=\"div-command-pre-wrapper\">
-    <pre><code><span class=\"code-argument\">$registry_path</span></code></pre>
+      <code><span class=\"code-argument\">$registry_path</span></code>
     </div>
     <h6>RegistryItem : </h6>
-    <pre><code><span class=\"code-argument\">$registry_item</span></code></pre>
+    <div class=\"div-command-pre-wrapper\">
+      <code><span class=\"code-argument\">$registry_item</span></code>
+    </div>
     <br>";
   }
 

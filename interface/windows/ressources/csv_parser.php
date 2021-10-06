@@ -40,20 +40,31 @@ $ALL_counter_view = "";
 function CleanCommand($command)
 {
   $command_return="";
-  $command_array = explode(" ", $command);
-  $command_return = $command_return."<span class=\"code-command\">$command_array[0] </span>";
-  array_shift($command_array); // remove first element
-  if (count($command_array)>=1) {
-    foreach ($command_array as $key => $value) {
-      if (strlen($value)>=1) {
-        if ($value[0]=='-') {
-          $command_return = $command_return."<span class=\"code-option\">$value </span>";
-        }else {
-          $command_return = $command_return."<span class=\"code-argument\">$value </span>";
-        }
-      }
-
+  $command = str_replace("  ", " ", $command); // clean command
+  $commands_array = explode(";", $command);
+  // for each command
+  foreach ($commands_array as $command_key => $command_content) {
+    $command_array = explode(" ", $command_content);
+    if ($command_array[0]=="") {
+      array_shift($command_array); // remove first first space
     }
+    $command_return = $command_return."<span class=\"code-command\">$command_array[0] </span>";
+    array_shift($command_array); // remove first element
+    if (count($command_array)>=1) {
+      // for each arg and values
+      foreach ($command_array as $key => $value) {
+        if (strlen($value)>=1) {
+          // if it is an argument (with '-')
+          if ($value[0]=='-' || $value[0]=='/' || $value[0]=='+') {
+            $command_return = $command_return."<span class=\"code-option\">$value </span>";
+          }else {
+            $command_return = $command_return."<span class=\"code-argument\">$value </span>";
+          }
+        }
+
+      }
+    }
+    $command_return = $command_return." ; ";
   }
   return $command_return;
 }

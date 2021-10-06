@@ -75,7 +75,7 @@ function CleanCommand($command)
 // Output : String
 // Example :
 // [->item1 \n ->item2]  to  [<ul><li>item1</li><li>item2</li></ul>]
-function clean_text($string){
+function CleanText($string){
   $string_content = $string;
   $first_occur_pos = strpos($string, '->');
   if ($first_occur_pos !== false) {
@@ -275,26 +275,26 @@ function write_tr($data)
 
   //**** Compute some values before content printing ****//
   /* intro */
-  $intro_content = clean_text($intro);
+  $intro_content = CleanText($intro);
 
   /* Consequences */
   $consequences_content = "";
   if ($consequences!="") {
-    $consequences_content = clean_text($consequences);
+    $consequences_content = CleanText($consequences);
     $consequences_content="<h4>Potential impact</h4><div class=\"alert alert-danger\" role=\"alert\">$consequences_content</div>";
   }
 
   /* Advices */
   $advice_content = "";
   if ($advice!="") {
-    $advice_content = clean_text($advice);
+    $advice_content = CleanText($advice);
     $advice_content="<h4>Advices</h4><div class=\"alert alert-success\" role=\"alert\">$advice_content</div>";
   }
 
   /* Notes */
   $notes_content = "";
   if ($notes) {
-    $notes_content = clean_text($notes);
+    $notes_content = CleanText($notes);
     $notes_content="<h4>Notes</h4><div class=\"alert alert-secondary\" role=\"alert\">$notes_content</div>";
   }
 

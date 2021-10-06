@@ -83,8 +83,9 @@ function clean_text($string){
     $string_content = substr_replace($string_content, "<ul><li>", $first_occur_pos, strlen('->'));
     $string_content = str_replace("->", "</li><li>", $string_content);
     $string_content = $string_content."</li></ul>";
+  }else {
+    $string_content = str_replace("\n", "<br>", $string_content);
   }
-  $string_content = str_replace("\n", "<br>", $string_content);
   return $string_content;
 }
 

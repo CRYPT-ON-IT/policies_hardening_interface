@@ -89,9 +89,9 @@ function CleanText($string){
   return $string_content;
 }
 
-/* write_tr function is used to print row's policies */
+/* FileParser function is used to print row's policies */
 // Input : Array
-function write_tr($data)
+function FileParser($data)
 {
   global $global_categ;
   global $ALL_table_content;
@@ -511,7 +511,7 @@ $row = 0;
 if (($handle = fopen($link_csv_file, "r")) !== FALSE) {
     while (($data = fgetcsv($handle, 3000, ",")) !== FALSE) {
         if ($row>0) {
-          write_tr($data);
+          FileParser($data);
         }
 
         $row++;

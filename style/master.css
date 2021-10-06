@@ -93,3 +93,7 @@ span{
   margin-top: 0;
   margin-bottom: 1rem;
 }
+
+p{
+  word-break: break-word;
+}

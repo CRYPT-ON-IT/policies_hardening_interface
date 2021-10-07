@@ -65,11 +65,11 @@
           <!-- CSV file loader -->
           <?php include($link_motor_table_parser);?>
           <!--////////////////////////// Nav list ///////////////////////////-->
-          <div class="col-3 col-xxl-3">
+          <div class="col-1 col-xxl-3">
               <?php include($link_motor_categories);?>
           </div>
           <!--///////////////////////// Tab content /////////////////////////-->
-          <div class="col-9 col-xxl-9">
+          <div class="col-11 col-xxl-9">
               <?php echo "$ALL_progress_view";
               echo "$ALL_counter_view";?>
               <?php include($link_motor_table_content); ?>

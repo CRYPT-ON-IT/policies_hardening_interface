@@ -136,7 +136,7 @@ function FileParser($data)
     </tr>
     ";
     $ALL_categories_content = $ALL_categories_content."
-    <a class=\"list-group-item list-group-item-action\" href=\"#$categoty_content-$id_cleaned\"><b>$id - </b>$category</a>
+    <a class=\"list-group-item list-group-item-action\" href=\"#$categoty_content-$id_cleaned\"><b>$id</b><span class=\"d-none d-xxl-inline\"> - $category</span></a>
     ";
     $global_categ = $category;
   }

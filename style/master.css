@@ -97,3 +97,7 @@ span{
 p{
   word-break: break-word;
 }
+
+.policy-name{
+  padding-top: 0.7em !important;
+}

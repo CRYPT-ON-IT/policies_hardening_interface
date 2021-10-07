@@ -26,18 +26,21 @@
       <thead>
         <tr class="sortable">
           <th id="number" scope="col">#</th>
+          <th scope="col">Apply</th>
           <th scope="col">Mode</th>
           <th scope="col">Name</th>
           <th scope="col">Severity</th>
           <th scope="col">UIX impact</th>
           <th scope="col">Default Value</th>
           <th scope="col">Recommended Value</th>
-          <th scope="col">Apply</th>
         </tr>
       </thead>
       <thead>
         <tr class="sortable">
           <th scope="col">Filter</th>
+          <th scope="col">
+            <input id="check-filter" class="form-check-input" type="checkbox" value="">
+          </th>
           <th scope="col">
             <select id="selected-mode" class="form-select form-select-sm" aria-label="Default select example">
               <option value="0" selected>None</option>
@@ -69,9 +72,6 @@
           </th>
           <th scope="col"></th>
           <th scope="col"></th>
-          <th scope="col">
-            <input id="check-filter" class="form-check-input" type="checkbox" value="">
-          </th>
         </tr>
       </thead>
 

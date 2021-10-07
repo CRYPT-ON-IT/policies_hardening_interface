@@ -253,6 +253,9 @@ function FileParser($data)
     <th class=\"btn-link csv-id\" scope=\"row\" data-bs-toggle=\"collapse\" data-bs-target=\"#data-content-$id_cleaned\" role=\"button\" data-target=\"#data-content-$id_cleaned\">
       <a href=\"#data-$id\" >$id</a>
     </th>
+    <td>
+      <input class=\"form-check-input check-policy\" type=\"checkbox\" value=\"\" $check_box_value>
+    </td>
     <td class=\"mode\"> $use_mode_content</td>
     <td class=\"policy-name\">$name</td>
     <td class=\"severity\" data-content=\"data-content-$id_cleaned\" >$severity</td>
@@ -267,9 +270,6 @@ function FileParser($data)
               <option value='3'>No impact</option>
       </select>
     </td>-->
-    <td>
-      <input class=\"form-check-input check-policy\" type=\"checkbox\" value=\"\" $check_box_value>
-    </td>
   </tr>";
 
 

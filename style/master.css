@@ -101,3 +101,15 @@ p{
 .policy-name{
   padding-top: 0.7em !important;
 }
+
+.buttons-gen-wrapper{
+  top : 50px;
+}
+
+.rounded{
+  border-radius: 1em !important;
+}
+
+.white-theme{
+  background-color: rgba(255, 255, 255, 0.5);
+}

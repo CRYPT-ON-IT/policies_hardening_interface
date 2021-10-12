@@ -106,14 +106,26 @@ $('#csv-generate').click(function(){
 /*********************************************/
 /************* checkbox event (use)  *************/
 
+function addCheckedPolicy() {
+  var content=$('#dynamic-checked-value').text();
+  $('#dynamic-checked-value').text(parseInt(content)+1);
+}
+
+function removeCheckedPolicy() {
+  var content=$('#dynamic-checked-value').text();
+  $('#dynamic-checked-value').text(parseInt(content)-1);
+}
+
 /* check event */
 $('.check-policy').change(function() {
   var data = $(this).parent().parent().attr("csv-data");
   var csv_data_list = data.split(",-,");
   if (csv_data_list[2]=="checked") {
     csv_data_list[2]="not-checked"
+    removeCheckedPolicy();
   }else {
     csv_data_list[2]="checked"
+    addCheckedPolicy();
   }
   data = csv_data_list.join(",-,")
   $(this).parent().parent().attr("csv-data",data);

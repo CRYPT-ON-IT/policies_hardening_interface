@@ -59,7 +59,7 @@
         </div>
         <!-- |||||||||||||||| SEARCH PART ||||||||||||||||||| -->
 
-        <?php include($link_motor_buttons); ?>
+
       </div>
         <div class="row">
           <!-- CSV file loader -->
@@ -70,8 +70,11 @@
           </div>
           <!--///////////////////////// Tab content /////////////////////////-->
           <div class="col-11 col-xxl-9">
-              <?php echo "$ALL_progress_view";
-              echo "$ALL_counter_view";?>
+              <?php
+              echo "$ALL_progress_view";
+              //echo "$ALL_counter_view";
+              ?>
+              <?php include($link_motor_buttons); ?>
               <?php include($link_motor_table_content); ?>
           </div>
         </div>
@@ -181,5 +184,12 @@
       }
     });
   });
+  </script>
+
+  <script type="text/javascript">
+  /* init diynamic checked value */
+  // it count how many checkbox has "checked" attribute 
+  var nbr_checked_value = $('.check-policy[checked]').length
+  $('#dynamic-checked-value').text(nbr_checked_value);
   </script>
 </html>

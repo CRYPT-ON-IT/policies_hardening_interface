@@ -2,17 +2,29 @@ ID,Category,Name,AssessmentStatus,Method,MethodOption,GetCommand,SetCommand,User
 1001,Updates,Software Update : Automatically check new software updates,Automatically,Registry,,,,,/Library/Preferences/com.apple.SoftwareUpdate,AutomaticCheckEnabled,true,true,bool,=,Medium,1,"->1. Open System Preferences
 ->2. Select Software Update
 ->3. Select Advanced
-->4. Verify that Check for updates is selected",0,1,Basic,"Auto Update verifies that your system has the newest security patches and software updates. If ""Automatically check for updates"" is not selected background updates for new malware definition files from Apple for XProtect and Gatekeeper will not occur.",https://developer.apple.com/documentation/devicemanagement/softwareupdate/,Automatic;Updates,,It is important that a system has the newest updates applied so as to prevent unauthorized persons from exploiting identified vulnerabilities.,"If false, deselects the ""Check for updates"" option and prevents the user from changing the option.",,Bool : true; false,
+->4. Verify that « Check for updates » is selected",0,1,Basic,"Auto Update verifies that your system has the newest security patches and software updates. If ""Automatically check for updates"" is not selected background updates for new malware definition files from Apple for XProtect and Gatekeeper will not occur.",https://developer.apple.com/documentation/devicemanagement/softwareupdate/,Automatic;Updates,,It is important that a system has the newest updates applied so as to prevent unauthorized persons from exploiting identified vulnerabilities.,"If false, deselects the ""Check for updates"" option and prevents the user from changing the option.",,Bool : true; false,
 1002,Updates,Software Update : Automatically download new software updates,Automatically,Registry,,,,,/Library/Preferences/com.apple.SoftwareUpdate,AutomaticDownload,true,true,bool,=,Medium,1,"->    1. Open System Preferences
 ->    2. Select Software Update
 ->    3. Select Advanced
-->    4. Verify that Download new updates when available is selected",0,1,Basic,,https://developer.apple.com/documentation/devicemanagement/softwareupdate/,Automatic;Update;Download,,,,,Bool : true; false,
+->    4. Verify that « Download new updates when available » is selected",0,1,Basic,This policy download new updates automaticly,https://developer.apple.com/documentation/devicemanagement/softwareupdate/,Automatic;Update;Download,,,,,Bool : true; false,
 1003,Updates,Software Update : Enable system data files updates install,Automatically,Registry,,,,,/Library/Preferences/com.apple.SoftwareUpdate,ConfigDataInstall,true,true,bool,=,Medium,1,,,,,,,,,,,,,
 1004,Updates,Software Update : Enable security updates install,Automatically,Registry,,,,,/Library/Preferences/com.apple.SoftwareUpdate,CriticalUpdateInstall,true,true,bool,=,Medium,1,,,,,,,,,,,,,
-1005,Updates,Software Update : Automatically install macOS updates,Automatically,Registry,,,,,/Library/Preferences/com.apple.SoftwareUpdate,AutomaticallyInstallMacOSUpdates,false,true,bool,=,Medium,1,,,,,,,,,,,,,
-1100,Updates,AppStore : Automatically keep apps up to date from app store,Automatically,Registry,,,,,/Library/Preferences/com.apple.commerce,AutoUpdate,false,true,bool,=,Medium,1,,,,,,,,,,,,,
-2000,Login/Logout,Sleep : AC display sleep timer,Automatically,PlistBuddy,-c,,,,/Library/Preferences/com.apple.PowerManagement.plist,'AC Power':'Display Sleep Timer',10,5,,=,Medium,ND,,,,,,,,,,,,,
-2001,Login/Logout,Sleep : Battery display sleep timer,Automatically,PlistBuddy,-c,,,,/Library/Preferences/com.apple.PowerManagement.plist,'Battery Power':'Display Sleep Timer',2,2,,=,Medium,ND,,,,,,,,,,,,,
+1005,Updates,Software Update : Automatically install macOS updates,Automatically,Registry,,,,,/Library/Preferences/com.apple.SoftwareUpdate,AutomaticallyInstallMacOSUpdates,false,true,bool,=,Medium,1,"->    1. Open System Preferences
+->    2. Select Software Update
+->    3. Select Advanced
+->    4. Verify that « Install MacOS updates » is selected",0,1,Basic,This policy install MacOS updates automaticly,https://developer.apple.com/documentation/devicemanagement/softwareupdate/,Automatic;Updates; Install,,,,,Bool : true; false,
+1100,Updates,AppStore : Automatically keep apps up to date from app store,Automatically,Registry,,,,,/Library/Preferences/com.apple.commerce,AutoUpdate,false,true,bool,=,Medium,1,"->    1. Open System Preferences
+->    2. Select Software Update
+->    3. Select Advanced
+->    4. Verify that « Install apps updates from AppStore » is selected",0,1,Basic,This policy install apps from AppStore updates automaticly,https://developer.apple.com/documentation/devicemanagement/softwareupdate/,Automatic;Updates; Install ; Apps,,,,,Bool : true; false,
+2000,Login/Logout,Sleep : AC display sleep timer,Automatically,PlistBuddy,-c,,,,/Library/Preferences/com.apple.PowerManagement.plist,'AC Power':'Display Sleep Timer',10,5,,=,Medium,ND,"->    1. Open System Preferences
+->    2. Select Battery
+->    3. Select Battery
+->    4. Verify that « Turn display off after : “ is set to 5",2,1,Basic,This policy turn off the display after a time of inactivity when your computer is using his battery.,https://support.apple.com/guide/mac-help/set-sleep-and-wake-settings-mchle41a6ccd/mac,Battery ; Sleep ; Display,,,,,String : 1 to Never,
+2001,Login/Logout,Sleep : Battery display sleep timer,Automatically,PlistBuddy,-c,,,,/Library/Preferences/com.apple.PowerManagement.plist,'Battery Power':'Display Sleep Timer',2,2,,=,Medium,ND,"->    1. Open System Preferences
+->    2. Select Battery
+->    3. Select Power Adapter
+->    4. Verify that « Turn display off after : “ is set to 10",2,1,Basic,This policy turn off the display after a time of inactivity when your computer is charging.,https://support.apple.com/guide/mac-help/set-sleep-and-wake-settings-mchle41a6ccd/mac,Battery ; Sleep ; Display,,,,,String : 1 to Never,
 2100,Login/Logout,Screen Saver : Enable prompt for a password on screen saver,,Registry,,,,,com.apple.screensaver,askForPassword,false,true,bool,=,High,ND,,,,,,,,,,,,,
 2101,Login/Logout,Screen Saver : Set password delay,,Registry,,,,,com.apple.screensaver,askForPasswordDelay,,0,int,<=,High,ND,,,,,,,,,,,,,
 2102,Login/Logout,Screen Saver : Set an inactivity interval for the screen saver,Automatically,Registry,-currentHost,,,username,com.apple.screensaver,idleTime,1200,1200,int,<=,Medium,1,,,,,,,,,,,,,

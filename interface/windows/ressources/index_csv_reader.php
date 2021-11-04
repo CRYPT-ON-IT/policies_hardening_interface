@@ -147,9 +147,15 @@
       // Number 13 is the "Enter" key on the keyboard
       if (event.keyCode === 13) {
           var value = $(this).val().toLowerCase();
+          var splitedContent = value.split(" ");
           $("table tr.row-content").filter(function() {
+            var status = 1
+            var curentText = $(this).text().toLowerCase()
+            for (const elemt of splitedContent) {
+              status = status && curentText.includes(elemt)
+            }
+            $(this).toggle(status)
             //$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
           });
       }
     });
@@ -188,7 +194,7 @@
 
   <script type="text/javascript">
   /* init diynamic checked value */
-  // it count how many checkbox has "checked" attribute 
+  // it count how many checkbox has "checked" attribute
   var nbr_checked_value = $('.check-policy[checked]').length
   $('#dynamic-checked-value').text(nbr_checked_value);
   </script>

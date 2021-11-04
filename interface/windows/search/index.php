@@ -57,13 +57,18 @@
     </footer>
     <script type="text/javascript">
     $(document).ready(function(){
-    $("#input-search").on("keyup", function() {
-      var value = $(this).val().toLowerCase();
-      $("#result-search a").filter(function() {
-        //$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-        $(this).toggle($(this).text().toLowerCase().includes(value))
+      $("#input-search").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        var splitedContent = value.split(" ");
+        $("#result-search a").filter(function() {
+          var status = 1
+          var curentText = $(this).text().toLowerCase()
+          for (const elemt of splitedContent) {
+            status = status && curentText.includes(elemt)
+          }
+          $(this).toggle(status)
+        });
       });
-    });
     });
     </script>
   </body>

@@ -71,8 +71,12 @@
           <!--///////////////////////// Tab content /////////////////////////-->
           <div class="col-11 col-xxl-9">
               <?php
-              echo "$ALL_progress_view";
-              //echo "$ALL_counter_view";
+              // Prod code
+              if ("$_SERVER[HTTP_HOST]" == "localhost:8888") {
+                echo "$ALL_progress_view";
+                //echo "$ALL_counter_view";
+              };
+
               ?>
               <?php include($link_motor_buttons); ?>
               <?php include($link_motor_table_content); ?>

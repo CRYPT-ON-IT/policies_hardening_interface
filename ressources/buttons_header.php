@@ -8,7 +8,7 @@
 
 <!-- Buttons part -->
 
-<div class="buttons-gen-wrapper position-sticky blur-backg white-theme rounded m-3 p-3">
+<div class="buttons-gen-wrapper position-sticky blur-backg white-theme rounded m-3 p-3" style="z-index: 10;">
   <div class="row">
     <div class="col-6">
       <div class="">

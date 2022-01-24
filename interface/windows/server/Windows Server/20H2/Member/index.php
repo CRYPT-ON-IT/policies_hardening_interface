@@ -1,8 +1,8 @@
 
 <!--file that will be read in interface (ux list)-->
-<?php $link_csv_file = "finding_list_msft_security_baseline_windows_server_20h2_dc_machine.csv"; ?>
+<?php $link_csv_file = "finding_list_msft_security_baseline_windows_server_20h2_member_machine.csv"; ?>
 <!--file that will be read in to generate csv file (original list)-->
-<?php $link_csv_original_file = "finding_list_msft_security_baseline_windows_server_20h2_dc_machine.csv"; ?>
+<?php $link_csv_original_file = "finding_list_msft_security_baseline_windows_server_20h2_member_machine.csv"; ?>
 
 <?php
 $reference_name = "Microsoft Security Baseline"; //* necessary value

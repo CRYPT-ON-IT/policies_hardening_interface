@@ -6,9 +6,10 @@
 
 <?php
 $reference_name = "Microsoft Security Baseline"; //* necessary value
-//$reference_date = "09/13/2021";       // optional
+$reference_date = "To ckeck";       // optional
 $reference_version = "Final"; // optional
 $reference_type = "machine";    // optional
+$reference_source_url = "";
  ?>
 
 <!-- All links -->

@@ -21,6 +21,8 @@
         <hr>
 
         <!-- |||||||||||||||| REFERENCE PART |||||||||||||||| -->
+        <!-- CSV file loader -->
+        <?php include($link_motor_table_parser);?>
         <div class="row">
           <div class="col-6">
             <table class="table" style="border: solid 1px rgb(227, 227, 227);">
@@ -36,6 +38,7 @@
                 if ($reference_type!="") {
                   echo "<tr><th>Type</th><td>$reference_type</td></tr>";
                 }
+                echo "<tr><th>Number of policies</th><td>$policies_nbr</td></tr>";
                 if ($reference_source_url!="") {
                   $reference_source_url_host = parse_url($reference_source_url)["host"];
                   echo "<tr>
@@ -62,8 +65,6 @@
 
       </div>
         <div class="row">
-          <!-- CSV file loader -->
-          <?php include($link_motor_table_parser);?>
           <!--////////////////////////// Nav list ///////////////////////////-->
           <div class="col-1 col-xxl-3">
               <?php include($link_motor_categories);?>
@@ -74,7 +75,7 @@
               // Prod code
               if ("$_SERVER[HTTP_HOST]" == "localhost:8888") {
                 echo "$ALL_progress_view";
-                //echo "$ALL_counter_view";
+                echo "$ALL_counter_view";
               };
 
               ?>

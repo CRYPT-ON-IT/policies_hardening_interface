@@ -1,7 +1,7 @@
 
 <?php
 //get name domain
-$domain_link = "http://$_SERVER[HTTP_HOST]";
+$domain_link = "https://$_SERVER[HTTP_HOST]";
 // get path directory
 $actual_link = "$_SERVER[REQUEST_URI]";
 
